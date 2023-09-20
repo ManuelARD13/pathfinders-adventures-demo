@@ -1,0 +1,942 @@
+[
+   {
+      "razes": [
+         {
+            "razeName": "human",
+            "razeSkills": [
+               "Weapon Proficiency",
+               "General's Leadership",
+               "Talented Apprentice",
+               "Adventurer"
+            ],
+            "razeLore": "Humans possess exceptional drive and a great capacity to endure and expand, and as such are currently the dominant race in the world. Their empires and nations are vast, sprawling things, and the citizens of these societies carve names for themselves with the strength of their sword arms and the power of their spells. Humanity is best characterized by its tumultuousness and diversity, and human cultures run the gamut from savage but honorable tribes to decadent, devil-worshiping noble families in the most cosmopolitan cities. Human curiosity and ambition often triumph over their predilection for a sedentary lifestyle, and many leave their homes to explore the innumerable forgotten corners of the world or lead mighty armies to conquer their neighbors, simply because they can",
+            "razeBKImg": "https://i.imgur.com/Htwa9J6.jpg",
+            "femaleImg": "https://i.imgur.com/GfgzOBw.png",
+            "maleImg": "https://i.imgur.com/fgt8E0D.png",
+            "availableClasses": {
+               "male": [
+                  "Assasin",
+                  "Barbarian",
+                  "Berzerker",
+                  "Caster",
+                  "Crusader",
+                  "Fighter",
+                  "Hunter",
+                  "Knight",
+                  "Paladin",
+                  "Rider",
+                  "Samurai",
+                  "Warrior"
+               ],
+               "female": [
+                  "Berzerker",
+                  "Caster",
+                  "Crusader",
+                  "Fighter",
+                  "Knight",
+                  "Priest",
+                  "Ranger",
+                  "Rider",
+                  "Samurai",
+                  "Shaman",
+                  "Warrior",
+                  "Warlock"
+               ]
+            },
+            "dualRaze": true,
+            "razeModifiers": {
+               "CON": 0,
+               "STR": 0,
+               "DEX": 0,
+               "INT": 2,
+               "WIS": -1,
+               "CHA": 2
+            }
+         },
+         {
+            "razeName": "elf",
+            "razeSkills": [
+               "Mystical Perception",
+               "Blood Linage Wisdom",
+               "Elven Inmunity & Magic",
+               "Low-light Vision"
+            ],
+            "razeLore": "The long-lived elves are children of the natural world, similar in many superficial ways to fey creatures, yet different as well. Elves value their privacy and traditions, and while they are often slow to make friends, at both the personal and national levels, once an outsider is accepted as a comrade, such alliances can last for generations. Elves have a curious attachment to their surroundings, perhaps as a result of their incredibly long lifespans or some deeper, more mystical reason. Elves who dwell in a region for long find themselves physically adapting to match their surroundings, most noticeably taking on coloration reflecting the local environment.",
+            "razeBKImg": "https://i.imgur.com/SylK7Kb.png",
+            "femaleImg": "https://i.imgur.com/ldlwtYl.png",
+            "maleImg": "https://i.imgur.com/jY083KY.png",
+            "availableClasses": {
+               "male": [
+                  "Assasin",
+                  "Caster", 
+                  "Celestial Defender",
+                  "Hunter",
+                  "Paladin",
+                  "Ranger",
+                  "Samurai",
+                  "Warrior",
+                  "Warlock"
+               ],
+               "female": [
+                  "Assasin",
+                  "Caster",
+                  "Dragon Tamer",
+                  "Hunter",
+                  "Knight",
+                  "Paladin",
+                  "Priest",
+                  "Ranger",
+                  "Warrior",
+                  "Warlock"
+               ]
+            },
+            "dualRaze": true,
+            "razeModifiers": {
+               "CON": -2,
+               "STR": 0,
+               "DEX": 2,
+               "INT": 2,
+               "WIS": 0,
+               "CHA": 0
+            }
+         },
+         {
+            "razeName": "orc",
+            "razeSkills": [
+               "Brutal Intimidation",
+               "Beast's Authority",
+               "Berzerk Ferocity",
+               "Dark Vision"
+            ],
+            "razeLore": "Orcs are aggressive, callous, and domineering. Bullies by nature, they respect strength and power as the highest virtues. On an almost instinctive level, orcs believe they are entitled to anything they want unless someone stronger can stop them from seizing it. They rarely exert themselves off the battlefield except when forced to do so; this attitude stems not just from laziness but also from an ingrained belief that work should trickle down through the pecking order until it falls upon the shoulders of the weak. They take slaves from other races, orc men brutalize orc women, and both abuse children and elders, on the grounds that anyone too feeble to fight back deserves little more than a life of suffering. Surrounded at all times by bitter enemies, orcs cultivate an attitude of indifference to pain, vicious tempers, and a fierce willingness to commit unspeakable acts of vengeance against anyone who dares to defy them.",
+            "razeBKImg": "https://i.imgur.com/WOHtwQE.jpg",
+            "femaleImg": "https://i.imgur.com/5iPKo3V.png",
+            "maleImg": "https://i.imgur.com/BHSVxDH.png",
+            "availableClasses": {
+               "male": [
+                  "Assasin",
+                  "Barbarian",
+                  "Berzerker",
+                  "Necromancer",
+                  "Ranger",
+                  "Rider",
+                  "Shaman",
+                  "Warchief",
+                  "Warrior",
+                  "Warlock"
+               ],
+               "female": [
+                  "Assasin",
+                  "Barbarian",
+                  "Fighter",
+                  "Hunter",
+                  "Priest",
+                  "Ranger",
+                  "Warrior",
+                  "Warlock"
+               ]
+            },
+            "dualRaze": true,
+            "razeModifiers": {
+               "CON": 2,
+               "STR": 4,
+               "DEX": 0,
+               "INT": -2,
+               "WIS": -2,
+               "CHA": -2
+            }
+         },
+         {
+            "razeName": "dwarf",
+            "razeSkills": [
+               "Dark Vision",
+               "Stonecunning",
+               "Slowly and Steady",
+               "Hardy"
+            ],
+            "razeLore": "Dwarves are a stoic but stern race, ensconced in cities carved from the hearts of mountains and fiercely determined to repel the depredations of savage races like orcs and goblins. More than any other race, the dwarves have acquired a reputation as dour and humorless craftsmen of the earth. It could be said that dwarven history shapes the dark disposition of many dwarves, for they reside in high mountains and dangerous realms below the earth, constantly at war with giants, goblins, and other such horrors.",
+            "razeBKImg": "https://i.imgur.com/ssNrVRu.jpg",
+            "femaleImg": "https://i.imgur.com/ZyqGfTo.png",
+            "maleImg": "https://i.imgur.com/pHbKy9T.png",
+            "availableClasses": {
+               "male": [
+                  "Assasin",
+                  "Barbarian",
+                  "Caster",
+                  "Explorer",
+                  "Iron Lord",
+                  "Paladin",
+                  "Priest",
+                  "Ranger",
+                  "Shaman",
+                  "Warrior",
+                  "Warlock"
+               ],
+               "female": [
+                  "Explorer",
+                  "Paladin",
+                  "Priest",
+                  "Ranger"
+               ]
+            },
+            "dualRaze": false,
+            "razeModifiers": {
+               "CON": 2,
+               "STR": 0,
+               "DEX": 0,
+               "INT": 0,
+               "WIS": 2,
+               "CHA": -2
+            }
+         }
+      ]
+   },
+   {
+      "playableClasses": [
+         {
+            "className": "Assasin",
+            "classSkills": [
+               "Stealh Mastery",
+               "Fatal Blow",
+               "Anatomic Acknowledge",
+               "Small Weapons Proficiency"
+            ],
+            "classLore": "A mercenary undertaking his task with cold, professional detachment, the assassin is equally adept at espionage, bounty hunting, and terrorism. At his core, an assassin is an artisan, and his medium is death. Trained in a variety of killing techniques, assassins are among the most feared classes.",
+            "classIcon": "https://i.imgur.com/eKEOTZ3.png",
+            "classImages": {
+               "human": {
+                  "male": "https://i.imgur.com/igWDLOj.png",
+                  "female": "",
+                  "maleProfile": "https://i.imgur.com/EEt6eC3.png",
+                  "femaleProfile": ""
+               },
+               "elf": {
+                  "male": "https://i.imgur.com/USIQtEb.png",
+                  "female": "https://i.imgur.com/9Sqe8ME.png",
+                  "maleProfile": "https://i.imgur.com/mtT3tL1.png",
+                  "femaleProfile": "https://i.imgur.com/vLsS5Un.png"
+               },
+               "orc": {
+                  "male": "https://i.imgur.com/7tiOEWc.png",
+                  "female": "https://i.imgur.com/uzaD2L5.png",
+                  "maleProfile": "https://i.imgur.com/jhy9ZA8.png",
+                  "femaleProfile": "https://i.imgur.com/ppihHzc.png"
+               },
+               "dwarf": {
+                  "male": "https://i.imgur.com/yQDyyGN.png",
+                  "female": "",
+                  "maleProfile": "https://i.imgur.com/iidKH7B.png",
+                  "femaleProfile": ""
+               }
+            },
+            "classRequirements": {
+               "DEX": 14,
+               "INT": 10
+            },
+            "hitPoints": 8,
+            "dualClass": false
+         },
+         {
+            "className": "Babarian",
+            "classSkills": [
+               "Untamable Rage",
+               "Beast Reflexes",
+               "Taunt",
+               "Feral Intimidation"
+            ],
+            "classLore": "Barbarians excel in combat, possessing the martial prowess and fortitude to take on foes seemingly far superior to themselves. With rage granting them boldness and daring beyond that of most other warriors, barbarians charge furiously into battle and ruin all who would stand in their way.",
+            "classIcon": "https://i.imgur.com/vVWdxTB.png",
+            "classImages": {
+               "human": {
+                  "male": "https://i.imgur.com/igWDLOj.png",
+                  "female": "",
+                  "maleProfile": "https://i.imgur.com/EEt6eC3.png",
+                  "femaleProfile": ""
+               },
+               "elf": {
+                  "male": "https://i.imgur.com/USIQtEb.png",
+                  "female": "https://i.imgur.com/9Sqe8ME.png",
+                  "maleProfile": "https://i.imgur.com/mtT3tL1.png",
+                  "femaleProfile": "https://i.imgur.com/vLsS5Un.png"
+               },
+               "orc": {
+                  "male": "https://i.imgur.com/7tiOEWc.png",
+                  "female": "https://i.imgur.com/uzaD2L5.png",
+                  "maleProfile": "https://i.imgur.com/jhy9ZA8.png",
+                  "femaleProfile": "https://i.imgur.com/ppihHzc.png"
+               },
+               "dwarf": {
+                  "male": "https://i.imgur.com/yQDyyGN.png",
+                  "female": "",
+                  "maleProfile": "https://i.imgur.com/iidKH7B.png",
+                  "femaleProfile": ""
+               }
+            },
+            "classRequirements": {
+               "CON": 15,
+               "STR": 12
+            },
+            "hitPoints": 12,
+            "dualClass": false
+         },
+         {
+            "className": "Berzerker",
+            "classSkills": [
+               "Berzerk Fury",
+               "Monstrous Resistence",
+               "Blood Hunger",
+               "Brain Crushed"
+            ],
+            "classLore": "A Berserker relishes in the glory of combat. Their hedonistic pleasure from battle wounds is borderline masochistic. While enraged, they enter a sort of higher state where pain is just another form of indulgence. Extremely resistents, overwhelmingly strong and with a untameble rage; Berzerkers are a doble-edge ally or the most dangerous of foes.",
+            "classIcon": "https://i.imgur.com/FDuaBg8.png",
+            "classImages": {
+               "human": {
+                  "male": "https://i.imgur.com/6WbdhJx.png",
+                  "female": "https://i.imgur.com/NwcU00v.png",
+                  "maleProfile": "https://i.imgur.com/0Ez42FN.png",
+                  "femaleProfile": "https://i.imgur.com/FNtCocj.png"
+               },
+               "elf": {
+                  "male": "",
+                  "female": ""
+               },
+               "orc": {
+                  "male": "https://i.imgur.com/skBm0fj.png",
+                  "maleProfile": "https://i.imgur.com/wSlBa7g.png"
+               },
+               "dwarf": {
+                  "male": "",
+                  "female": ""
+               }
+            },
+            "classRequirements": {
+               "CON": 16,
+               "STR": 15
+            },
+            "hitPoints": 20,
+            "dualClass": false
+         },
+         {
+            "className": "Caster",
+            "classSkills": [
+               "Magical Nature",
+               "Arcane Bond",
+               "Arcane Literature",
+               "Arcane School"
+            ],
+            "classLore": "While some seek to control their abilities through meditation and discipline, becoming masters of their fantastic birthright, others give in to their magic, letting it rule their lives with often explosive results. Regardless, casters live and breathe that which other spellcasters devote their lives to mastering, and for them magic is more than a boon or a field of study; it is life itself. casters excel at casting a selection of favored spells frequently, making them powerful battle mages. As they become familiar with a specific and ever-widening set of spells, casters often discover new and versatile ways of making use of magics other spellcasters might overlook. Their bloodlines also grant them additional abilities, assuring that no two casters are ever quite alike.",
+            "classIcon": "https://i.imgur.com/jBBTATN.png",
+            "classImages": {
+               "human": {
+                  "male": "https://i.imgur.com/aEAWOy2.png",
+                  "female": "https://i.imgur.com/32iUoVl.png",
+                  "maleProfile": "https://i.imgur.com/BZFXMZs.png",
+                  "femaleProfile": "https://i.imgur.com/HID1Ytq.png"
+               },
+               "elf": {
+                  "male": "https://i.imgur.com/8Vp5na6.png",
+                  "female": "https://i.imgur.com/z6daOLY.png",
+                  "maleProfile": "https://i.imgur.com/q7HXCmR.png",
+                  "femaleProfile": "https://i.imgur.com/SH5R1uA.png"
+               },
+               "orc": {
+                  "male": "",
+                  "female": ""
+               },
+               "dwarf": {
+                  "male": "https://i.imgur.com/bgaudC8.png",
+                  "female": "",
+                  "maleProfile": "https://i.imgur.com/fTTjbNU.png",
+                  "femaleProfile": ""
+               }
+            },
+            "classRequirements": {
+               "INT": 14,
+               "CHA": 10
+            },
+            "hitPoints": 6,
+            "dualClass": false
+         },
+         {
+            "className": "Celestial Defender",
+            "classSkills": [
+               "Sword of Damocles",
+               "Heavens Shield",
+               "Lay on Hands",
+               "Vow of Justice"
+            ],
+            "classLore": "Celestial Defenders are the fiercest of heavenly warriors, making up the most and best of the Blessed Army, train in heaven whenever an elf rise as a Gods champion. Empowered with divine might, they are perfect bastions of light guided by righteous wrath and an otherwise good disposition, making them feared by evildoers and respected by less vile creatures. Most usually acting as soldiers, knights, or paladins for a good cause, they revel in the adrenaline of battle, and seek evil wherever it may hide.",
+            "classIcon": "https://i.imgur.com/fVjIEzp.png",
+            "classImages": {
+               "elf": {
+                  "male": "https://i.imgur.com/4lYJq5N.png",
+                  "female": "",
+                  "maleProfile": "https://i.imgur.com/1zut60p.png",
+                  "femaleProfile": ""
+               }
+            },
+            "classRequirements": {
+               "CON": 16,
+               "CHA": 16
+            },
+            "hitPoints": 20,
+            "dualClass": false
+         },
+         {
+            "className": "Crusader",
+            "classSkills": [
+               "Holy Quest",
+               "Divine Aura",
+               "Evil Smite",
+               "Vow of Faith"
+            ],
+            "classLore": "Crusaders serve the militant arm of a church, ready to stand guard over the religion's holy places and to be its swift, avenging arm against those who resist its truth.",
+            "classIcon": "https://i.imgur.com/VChKkyj.png",
+            "classImages": {
+               "human": {
+                  "male": "https://i.imgur.com/3iZExzD.png",
+                  "female": "https://i.imgur.com/23UlmAL.png",
+                  "maleProfile": "https://i.imgur.com/RvC7Ro8.png",
+                  "femaleProfile": "https://i.imgur.com/WRcFZVb.png"
+               }
+            },
+            "classRequirements": {
+               "CON": 14,
+               "WIS": 10
+            },
+            "hitPoints": 12,
+            "dualClass": false
+         },
+         {
+            "className": "Dragon Tamer",
+            "classSkills": [
+               "Dragon Breathing",
+               "Draconic Senses",
+               "Elemental Domain",
+               "Dragon Raider"
+            ],
+            "classLore": "Rise by and with dragons and wyverns, Dragon Tamers are the perfect bridge between this magestic creatures and the humanoids around them. They swear to protect the dragon's lands and childrens with their lifes and the tremendous power they have inherited from their ancient bond with them. Beware but the Dragon Tamers do not recognize Good or Evil, they just live, prey and kill for whatever their dragons teach to them.",
+            "classIcon": "https://i.imgur.com/8f6Z4dy.png",
+            "classImages": {
+               "elf": {
+                  "male": "",
+                  "female": "https://i.imgur.com/bt11zNT.png",
+                  "maleProfile": "",
+                  "femaleProfile": "https://i.imgur.com/edBdVwz.png"
+               }
+            },
+            "classRequirements": {
+               "STR": 16,
+               "CHA": 16
+            },
+            "hitPoints": 18,
+            "dualClass": false
+         },
+         {
+            "className": "Fighter",
+            "classSkills": [
+               "Weapon Mastery",
+               "Battle Genius",
+               "Flurry of Blows",
+               "Mindfull Breath"
+            ],
+            "classLore": "Lords of the battlefield, fighters are a disparate lot, training with many weapons or just one, perfecting the uses of armor, learning the fighting techniques of exotic masters, and studying the art of combat, all to shape themselves into living weapons. Far more than mere thugs, these skilled warriors reveal the true deadliness of their weapons, turning hunks of metal into arms capable of taming kingdoms, slaughtering monsters, and rousing the hearts of armies. Soldiers, knights, hunters, and artists of war, fighters are unparalleled champions, and woe to those who dare stand against them.",
+            "classIcon": "https://i.imgur.com/wtpA7oK.png",
+            "classImages": {
+               "human": {
+                  "male": "https://i.imgur.com/OHpp7Oo.png",
+                  "female": "https://i.imgur.com/FgALwiY.png",
+                  "maleProfile": "https://i.imgur.com/fhztMIw.png",
+                  "femaleProfile": "https://i.imgur.com/wQ2up3R.png"
+               },
+               "orc": {
+                  "male": "",
+                  "female": "https://i.imgur.com/c39qO0y.png",
+                  "maleProfile": "",
+                  "femaleProfile": "https://i.imgur.com/4SjSQsr.png"
+               }
+            },
+            "classRequirements": {
+               "CON": 12,
+               "DEX": 16
+            },
+            "hitPoints": 10,
+            "dualClass": false
+         },
+         {
+            "className": "Explorer",
+            "classSkills": [
+               "Treasure Hunter",
+               "Mystery's Scroll",
+               "Street Wisdom",
+               "Universal Knowledge"
+            ],
+            "classLore": "Brave invetigators and scavengers of lost or forgotten knowledge, Explorers are quintessential adventurers, exploring the world for esoteric truths, magical and mundane relics and artifacts, and new and mysterious vistas, be they wonderful or terrible. For some, this journey is purely about the wealth, for others the glory of discovery, and still more are stirred by the irresistible drive to uncover the bones of the ages and legends of forgotten epochs in an effort to chronicle the deeds of yesterday, today, and tomorrow.",
+            "classIcon": "https://i.imgur.com/F7jpnCj.png",
+            "classImages": {
+               "dwarf": {
+                  "male": "https://i.imgur.com/ROdxAjq.png",
+                  "female": "https://i.imgur.com/ABvHxed.png",
+                  "maleProfile": "https://i.imgur.com/EJM5PYI.png",
+                  "femaleProfile": "https://i.imgur.com/8JFpvzr.png"
+               }
+            },
+            "classRequirements": {
+               "INT": 16,
+               "WIS": 14
+            },
+            "hitPoints": 8,
+            "dualClass": false
+         },
+         {
+            "className": "Hunter",
+            "classSkills": [
+               "Favored Foe",
+               "Headshoot",
+               "Hunting Mastery",
+               "Animal Instinct"
+            ],
+            "classLore": "Be they scouts, trackers, or bounty hunters, rangers share much in common: unique mastery of specialized weapons, skill at stalking even the most elusive game, and the expertise to defeat a wide range of quarries. Knowledgeable, patient, and skilled hunters, these rangers hound man, beast, and monster alike, gaining insight into the way of the predator, skill in varied environments, and ever more lethal martial prowess.",
+            "classIcon": "https://i.imgur.com/kz6Thjo.png",
+            "classImages": {
+               "human": {
+                  "male": "https://i.imgur.com/lPGuCPn.png",
+                  "female": "",
+                  "maleProfile": "https://i.imgur.com/y8td23P.png",
+                  "femaleProfile": ""
+               },
+               "elf": {
+                  "male": "https://i.imgur.com/dxjGWOD.png",
+                  "female": "https://i.imgur.com/IO9Ml0s.png",
+                  "maleProfile": "https://i.imgur.com/WKgjrth.png",
+                  "femaleProfile": "https://i.imgur.com/FKeaZOa.png"
+               },
+               "orc": {
+                  "male": "",
+                  "female": "https://i.imgur.com/l2cLuvF.png",
+                  "maleProfile": "",
+                  "femaleProfile": "https://i.imgur.com/lLu1L9a.png"
+               }
+            },
+            "classRequirements": {
+               "DEX": 14,
+               "WIS": 10
+            },
+            "hitPoints": 8,
+            "dualClass": false
+         },
+         {
+            "className": "Iron Lord",
+            "classSkills": [
+               "Father of Dwarfs",
+               "Lawbringer Hammer",
+               "Runic Knowledge",
+               "Ragnarok"
+            ],
+            "classLore": "Father of all. Ruler of the nine realms and God of War. Obsesivly lurking for magical powers beyond imagination, The Iron Lord is the most powerfull of all dwarfs, their maximun king. An expert on runic lenguage, earth resources, weapon enchantment and military leadership, The Iron Lord only live for Conquest of the most powerfull magic sources of the world. ",
+            "classIcon": "https://i.imgur.com/GXlwQDg.png",
+            "classImages": {
+               "dwarf": {
+                  "male": "https://i.imgur.com/qCMYqd8.png",
+                  "female": "",
+                  "maleProfile": "https://i.imgur.com/W6cIewp.png",
+                  "femaleProfile": ""
+               }
+            },
+            "classRequirements": {
+               "STR": 16,
+               "WIS": 16
+            },
+            "hitPoints": 20,
+            "dualClass": false
+         },
+         {
+            "className": "Knight",
+            "classSkills": [
+               "Resplendant Morale",
+               "Vow of Honor",
+               "Signature Weapon",
+               "Duel Master"
+            ],
+            "classLore": "The knight is a warrior aristocrat, skilled in war and steeped in social grace. Most come from powerful noble families, while others are minor nobles or even commoners who evince some skill at arms. The iconic knight's arms are the lance, sword, and hand weapons, but other knights may favor the katana and bow or the lance and spatha. A knight is distinguished from the fighter by his embrace of a code of honor that embodies the traditions of his society, order, or school. Emboldened and exalted by these principles, the knight exists as an inspiration to others, a match of valor and elegance who rises above his frailties to achieve great glory.",
+            "classIcon": "https://i.imgur.com/aEurYCh.png",
+            "classImages": {
+               "human": {
+                  "male": "https://i.imgur.com/2cxk7Ln.png",
+                  "female": "https://i.imgur.com/xavsi52.png",
+                  "maleProfile": "https://i.imgur.com/spVXqgd.png",
+                  "femaleProfile": "https://i.imgur.com/n2Nao1W.png"
+               },
+               "elf": {
+                  "male": "",
+                  "female": "https://i.imgur.com/y4MBR12.png",
+                  "maleProfile": "",
+                  "femaleProfile": "https://i.imgur.com/JFgaURz.png"
+               }
+            },
+            "classRequirements": {
+               "STR": 12,
+               "DEX": 16
+            },
+            "hitPoints": 10,
+            "dualClass": false
+         },
+         {
+            "className": "Necromancer",
+            "classSkills": [
+               "March of the Death",
+               "Death Touch",
+               "Channel Energy",
+               "Deadly Sanctuary"
+            ],
+            "classLore": "The goddess of death gives power over her dominion as freely as Life brings hers into the world. Wizards and clerics, in particular, master the art of necromancy through the lens of their studies and their faith. But what of those who draw their power directly from the goddess? Who do not merely worship her, but allow her will and her power to suffuse their very beings? These are the true necromancers, the dread followers of Death who carefully walk the line between the mortal concept of living and dead. They see beyond both into the churning heart of reality with the power to breed life and snuff it out in the blink of an eye.",
+            "classIcon": "https://i.imgur.com/PBDRvxw.png",
+            "classImages": {
+               "orc": {
+                  "male": "https://i.imgur.com/YiX1bSK.png",
+                  "female": "",
+                  "maleProfile": "https://i.imgur.com/Ir8JRZo.png",
+                  "femaleProfile": ""
+               }
+            },
+            "classRequirements": {
+               "INT": 12,
+               "CHA": 16
+            },
+            "hitPoints": 8,
+            "dualClass": false
+         },
+         {
+            "className": "Paladin",
+            "classSkills": [
+               "Holy Aura",
+               "Evil Vanquisher",
+               "Divine Hands",
+               "Holy Favor"
+            ],
+            "classLore": "Knights, crusaders, and lawbringers, paladins seek not just to spread divine justice but to embody the teachings of the virtuous deities they serve. In pursuit of their lofty goals, they adhere to ironclad laws of morality and discipline. As reward for their righteousness, these holy champions are blessed with boons to aid them in their quests: powers to banish evil, heal the innocent, and inspire the faithful. Although their convictions might lead them into conflict with the very souls they would save, paladins weather endless challenges of faith and dark temptations, risking their lives to do right and fighting to bring about a brighter future.",
+            "classIcon": "https://i.imgur.com/3hL4EQl.png",
+            "classImages": {
+               "human": {
+                  "male": "https://i.imgur.com/ghHCjd5.png",
+                  "female": "",
+                  "maleProfile": "https://i.imgur.com/nCOP7W0.png",
+                  "femaleProfile": ""
+               },
+               "elf": {
+                  "male": "https://i.imgur.com/VrxPw6E.png",
+                  "female": "https://i.imgur.com/0aUfDoo.png",
+                  "maleProfile": "https://i.imgur.com/Xh4ti11.png",
+                  "femaleProfile": "https://i.imgur.com/TY1MCwJ.png"
+               },
+               "dwarf": {
+                  "male": "https://i.imgur.com/ery07m6.png",
+                  "female": "https://i.imgur.com/ghxnEFr.png",
+                  "maleProfile": "https://i.imgur.com/t20PNkl.png",
+                  "femaleProfile": "https://i.imgur.com/4Lw7LUl.png"
+               }
+            },
+            "classRequirements": {
+               "CON": 12,
+               "CHA": 14
+            },
+            "hitPoints": 12,
+            "dualClass": false
+         },
+         {
+            "className": "Priest",
+            "classSkills": [
+               "Divine Caster",
+               "Divine Aura",
+               "Deity's Artifact",
+               "Channel Energy"
+            ],
+            "classLore": "In faith and the miracles of the divine, many find a greater purpose. Called to serve powers beyond most mortal understanding, all priests preach wonders and provide for the spiritual needs of their people. Clerics are more than mere priests, though; these emissaries of the divine work the will of their deities through strength and the magic of their gods. Devoted to the tenets of the religions and philosophies that inspire them, these ecclesiastics quest to spread the knowledge and inf luence of their faith.",
+            "classIcon": "https://i.imgur.com/3R5ShQH.png",
+            "classImages": {
+               "human": {
+                  "male": "",
+                  "female": "https://i.imgur.com/49zMDpm.png",
+                  "maleProfile": "",
+                  "femaleProfile": "https://i.imgur.com/ZmemOOR.png"
+               },
+               "elf": {
+                  "male": "",
+                  "female": "https://i.imgur.com/juUKHdF.png",
+                  "maleProfile": "",
+                  "femaleProfile": "https://i.imgur.com/QKZgzYo.png"
+               },
+               "orc": {
+                  "male": "",
+                  "female": "https://i.imgur.com/t5WSRon.png",
+                  "maleProfile": "",
+                  "femaleProfile": "https://i.imgur.com/UdLDYzY.png"
+               },
+               "dwarf": {
+                  "male": "https://i.imgur.com/7JYAj6C.png",
+                  "female": "https://i.imgur.com/X4iN0Mn.png",
+                  "maleProfile": "https://i.imgur.com/S7XeQux.png",
+                  "femaleProfile": "https://i.imgur.com/Z3qdMc9.png"
+               }
+            },
+            "classRequirements": {
+               "WIS": 12,
+               "CHA": 14
+            },
+            "hitPoints": 8,
+            "dualClass": true
+         },
+         {
+            "className": "Ranger",
+            "classSkills": [
+               "Animal Companion",
+               "Breath of the Wild",
+               "Animal Instincs",
+               "Feral Empathy"
+            ],
+            "classLore": "Hunters are warriors of the wilds that have forged close bonds with trusted animal companions. They focus their tactics on fighting alongside their companion animals as a formidable team of two. Able to cast a wide variety of nature spells and take on the abilities and attributes of beasts, hunters magically improve both themselves and their animal companions.",
+            "classIcon": "https://i.imgur.com/KvJoPwZ.png",
+            "classImages": {
+               "human": {
+                  "male": "",
+                  "female": "https://i.imgur.com/TZ2caiQ.png",
+                  "maleProfile": "",
+                  "femaleProfile": "https://i.imgur.com/zPzmzyY.png"
+               },
+               "elf": {
+                  "male": "https://i.imgur.com/UKpJDDD.png",
+                  "female": "https://i.imgur.com/o6zCwsW.png",
+                  "maleProfile": "https://i.imgur.com/HN1ORYS.png",
+                  "femaleProfile": "https://i.imgur.com/feYZLxM.png"
+               },
+               "orc": {
+                  "male": "https://i.imgur.com/Q3sG9xF.png",
+                  "female": "https://i.imgur.com/PngUT3v.png",
+                  "maleProfile": "https://i.imgur.com/TeKxdqK.png",
+                  "femaleProfile": "https://i.imgur.com/5bltIx7.png"
+               },
+               "dwarf": {
+                  "male": "https://i.imgur.com/jl1JXe4.png",
+                  "female": "https://i.imgur.com/DT63NQS.png",
+                  "maleProfile": "https://i.imgur.com/kquBLdj.png",
+                  "femaleProfile": "https://i.imgur.com/hTHZTp1.png"
+               }
+            },
+            "classRequirements": {
+               "DEX": 12,
+               "CHA": 15
+            },
+            "hitPoints": 10,
+            "dualClass": false
+         },
+         {
+            "className": "Rider",
+            "classSkills": [
+               "Exceptional Mount",
+               "Charge Battle",
+               "Long Weapons Mastery",
+               "Tamer Spirit"
+            ],
+            "classLore": "The cavalier is defined not only by his dedication to his order or his skill on the battlefield, but also by the special relationship he maintains with his mount. Where some cavaliers are simply skilled with horses or well-trained knights, the beast rider spends his life in constant pursuit of the most perfect mount, forming bonds with greater, more powerful, and more exotic creatures.",
+            "classIcon": "https://i.imgur.com/dK3YbuB.png",
+            "classImages": {
+               "human": {
+                  "male": "https://i.imgur.com/UqbSsnk.png",
+                  "female": "https://i.imgur.com/XQKliij.png",
+                  "maleProfile": "https://i.imgur.com/10eYgoZ.png",
+                  "femaleProfile": "https://i.imgur.com/hiApm2X.png"
+               },
+               "orc": {
+                  "male": "https://i.imgur.com/hAJ4VDY.png",
+                  "maleProfile": "https://i.imgur.com/1mh8xaq.png"
+               }
+            },
+            "classRequirements": {
+               "DEX": 12,
+               "CHA": 14
+            },
+            "hitPoints": 10,
+            "dualClass": false
+         },
+         {
+            "className": "Shaman",
+            "classSkills": [
+               "Spirit Animal",
+               "Totemic Control",
+               "Lightning Dance",
+               "Mystic Epiphany"
+            ],
+            "classLore": "While some heroes speak to gods or consort with otherworldly muses, shamans commune with the spirits of the world and the energies that exist in every living thing. These divine adventurers draw upon their power to shape the world and expand the influence of their spiritual patrons. Shamans have strong ties to natural spirits. They form powerful bonds with particular spirits, and as their power grows they learn to call upon other spirits in times of need.",
+            "classIcon": "https://i.imgur.com/2fBE6dH.png",
+            "classImages": {
+               "human": {
+                  "male": "",
+                  "female": "https://i.imgur.com/pYzAkKU.png",
+                  "maleProfile": "",
+                  "femaleProfile": "https://i.imgur.com/3QCzjWJ.png"
+               },
+               "orc": {
+                  "male": "https://i.imgur.com/vhl2xjJ.png",
+                  "female": "",
+                  "maleProfile": "https://i.imgur.com/u5TNhu5.png",
+                  "femaleProfile": ""
+               },
+               "dwarf": {
+                  "male": "https://i.imgur.com/ftr2oMa.png",
+                  "female": "",
+                  "maleProfile": "https://i.imgur.com/EOWSfze.png",
+                  "femaleProfile": ""
+               }
+            },
+            "classRequirements": {
+               "CON": 12,
+               "WIS": 14
+            },
+            "hitPoints": 8,
+            "dualClass": false
+         },
+         {
+            "className": "Samurai",
+            "classSkills": [
+               "Samurai Challenge",
+               "Vow of Honor",
+               "Unbreakable Discipline",
+               "Xing-Long's Sword"
+            ],
+            "classLore": "Few warriors are more dedicated to honor and the code of the warrior than the samurai. Trained from an early age in the art of war and sworn to the service of a lord, the samurai holds a position of power and respect in many lands, often serving as the voice and justice of the local noble. The samurai takes on his training with zeal, learning the way of the blade (typically a katana), the bow, and the horse. Some even learn how to effectively use firearms, if they are available. The samurai is often the most trusted soldier in his lord's employ. In him, the common folk see honor and sacrifice. He is an honorable warrior, dedicated to the realm and the leaders that guide it.",
+            "classIcon": "https://i.imgur.com/M8C6sIW.png",
+            "classImages": {
+               "human": {
+                  "male": "https://i.imgur.com/FZ9qrlM.png",
+                  "female": "https://i.imgur.com/GfXfHTv.png",
+                  "maleProfile": "https://i.imgur.com/myQvyFc.png",
+                  "femaleProfile": "https://i.imgur.com/cZEYFA2.png"
+               },
+               "elf": {
+                  "male": "https://i.imgur.com/nTkb883.png",
+                  "female": "",
+                  "maleProfile": "https://i.imgur.com/Zcp2gb0.png",
+                  "femaleProfile": ""
+               }
+            },
+            "classRequirements": {
+               "STR": 16,
+               "DEX": 16
+            },
+            "hitPoints": 10,
+            "dualClass": true
+         },
+         {
+            "className": "Warchief",
+            "classSkills": [
+               "Horde Warcry",
+               "Fury of the Elements",
+               "Beasts Leadership",
+               "Doomhammer"
+            ],
+            "classLore": "Warchief of the Horde. Son of Durotan, liberator of the orcs and chieftain of the Frostwolf clan. As the greatest shaman ever known, he stepped down to join the Earthen Ring in stabilizing the world following the Cataclysm.",
+            "classIcon": "https://i.imgur.com/jposVjE.png",
+            "classImages": {
+               "orc": {
+                  "male": "https://i.imgur.com/jHBA2I4.png",
+                  "female": "",
+                  "maleProfile": "https://i.imgur.com/CfSMjsf.png",
+                  "femaleProfile": ""
+               }
+            },
+            "classRequirements": {
+               "STR": 16,
+               "CHA": 16
+            },
+            "hitPoints": 18,
+            "dualClass": false
+         },
+         {
+            "className": "Warlock",
+            "classSkills": [
+               "Arcane Bloodline",
+               "Demonic Dealing",
+               "Magical Nature",
+               "Alchemyst"
+            ],
+            "classLore": "The chosen of deities, the spawn of monsters, pawns of fate and destiny, or simply flukes of fickle magic, Warlocks look within themselves for arcane prowess and draw forth might few mortals can imagine. Emboldened by lives ever threatening to be consumed by their innate powers, these magic-touched souls endlessly indulge in and refine their mysterious abilities, gradually learning how to harness their birthright and coax forth ever greater arcane feats. Just as varied as these innately powerful spellcasters abilities and inspirations are the ways in which they choose to utilize their gifts. While some seek to control their abilities through meditation and discipline, becoming masters of their fantastic birthright, others give in to their magic, letting it rule their lives with often explosive results. Regardless, Warlocks live and breathe that which other spellcasters devote their lives to mastering, and for them magic is more than a boon or a field of study; it is life itself.",
+            "classIcon": "https://i.imgur.com/KgFdPED.png",
+            "classImages": {
+               "human": {
+                  "male": "",
+                  "female": "https://i.imgur.com/uasLdpu.png",
+                  "maleProfile": "",
+                  "femaleProfile": "https://i.imgur.com/58lWcIL.png"
+               },
+               "elf": {
+                  "male": "https://i.imgur.com/tjnOHmO.png",
+                  "female": "https://i.imgur.com/OHwUOfr.png",
+                  "maleProfile": "https://i.imgur.com/hYtMwWU.png",
+                  "femaleProfile": "https://i.imgur.com/JTwb4te.png"
+               },
+               "orc": {
+                  "male": "https://i.imgur.com/fzkwQo2.png",
+                  "female": "https://i.imgur.com/Z5qEmAt.png",
+                  "maleProfile": "https://i.imgur.com/iXFQZ5h.png",
+                  "femaleProfile": "https://i.imgur.com/9DkHViJ.png"
+               },
+               "dwarf": {
+                  "male": "https://i.imgur.com/e3PbGvu.png",
+                  "female": "",
+                  "maleProfile": "https://i.imgur.com/cJtnLHT.png",
+                  "femaleProfile": ""
+               }
+            },
+            "classRequirements": {
+               "INT": 10,
+               "CHA": 14
+            },
+            "hitPoints": 6,
+            "dualClass": false
+         },
+         {
+            "className": "Warrior",
+            "classSkills": [
+               "Weapon Mastery",
+               "Power Warcry",
+               "Tactil Battle",
+               "Campaign Wrestler"
+            ],
+            "classLore": "Warriors are melee fighters highly trained in the arts of weaponry. These mighty warriors, strong and quick on the battlefield, depend on their heavy plate armor, shields, and battle prowess to defend themselves and ensure enemies don't focus on their softer-skinned allies. Weapon mastery is a staple of warrior training, and they are capable of delivering high damage with enormous two-handed weapons or by wielding two weapons. As warriors deal or take damage, their rage grows, allowing them to deliver truly crushing attacks in the heat of battle.",
+            "classIcon": "https://i.imgur.com/cNSh8f1.png",
+            "classImages": {
+               "human": {
+                  "male": "https://i.imgur.com/5YGdKHn.png",
+                  "female": "https://i.imgur.com/NRfSBw9.png",
+                  "maleProfile": "https://i.imgur.com/1t2kFPD.png",
+                  "femaleProfile": "https://i.imgur.com/SNLsajI.png"
+               },
+               "elf": {
+                  "male": "https://i.imgur.com/zPFPUxv.png",
+                  "female": "https://i.imgur.com/FoSH4XU.png",
+                  "maleProfile": "https://i.imgur.com/weddYvt.png ",
+                  "femaleProfile": "https://i.imgur.com/tWRIHcp.png"
+               },
+               "orc": {
+                  "male": "https://i.imgur.com/sWlqn1t.png",
+                  "female": "https://i.imgur.com/WCg7MMH.png",
+                  "maleProfile": "https://i.imgur.com/UCG817N.png",
+                  "femaleProfile": "https://i.imgur.com/QxF5BhY.png"
+               },
+               "dwarf": {
+                  "male": "https://i.imgur.com/syipRkn.png",
+                  "female": "",
+                  "maleProfile": "https://i.imgur.com/irkIddl.png",
+                  "femaleProfile": ""
+               }
+            },
+            "classRequirements": {
+               "STR": 14,
+               "DEX": 10
+            },
+            "hitPoints": 12,
+            "dualClass": true
+         }
+      ]
+   }
+]
