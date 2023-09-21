@@ -38,7 +38,7 @@ module.exports = {
         use: ["css-loader"],
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.(png|jpe?g|gif|mp3)$/i,
         use: [
           {
             loader: 'file-loader',
@@ -49,19 +49,20 @@ module.exports = {
         ],
       }
     ],
-    plugins: [
-      new HtmlWebpackPlugin({
-        template: "./public/index.html",
-        filename: "./index.html",
-      }),
-      new MiniCssExtractPlugin({
-        filename: "[name].css",
-      }),
-      new CleanWebpackPlugin(),
-    ],
-    optimization: {
-      minimize: true,
-      minimizer: [new CssMinimizerPlugin(), new TerserPlugin()],
-    },
+    
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./public/index.html",
+      filename: "./index.html",
+    }),
+    new MiniCssExtractPlugin({
+      filename: "[name].css",
+    }),
+    new CleanWebpackPlugin(),
+  ],
+  optimization: {
+    minimize: true,
+    minimizer: [new CssMinimizerPlugin(), new TerserPlugin()],
   },
 };
