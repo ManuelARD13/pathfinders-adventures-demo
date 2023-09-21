@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 
+
 import mainMenuTrack  from "../../audio/mainMenu.mp3"
 import  tavernTrack  from "../../audio/tavern.mp3"
 import humanTrack from "../../audio/human.mp3"
@@ -15,7 +16,8 @@ function SoundPlayer () {
 
   return(
     <>
-      <audio src={mainMenuTrack} autoPlay loop /> 
+      { screen !== "StatsGenerator" ? <audio src={mainMenuTrack} autoPlay loop /> : null }
+      { screen === "StatsGenerator" ? <audio src={tavernTrack} autoPlay loop /> : null }  
     </>
   )
 }

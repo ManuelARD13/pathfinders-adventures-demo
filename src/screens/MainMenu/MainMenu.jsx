@@ -16,7 +16,7 @@ function MainMenu() {
                     <input 
                         type="button" 
                         value="New Game" 
-                        // onClick={() => setScreen("DiceRoll")}  
+                        onClick={() => setScreen("StatsGenerator")}  
                     />
                     <input 
                         type="button" 

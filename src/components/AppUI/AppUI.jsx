@@ -11,12 +11,12 @@ import MainMenu from '../../screens/MainMenu/MainMenu';
 import SoundPlayer from '../SoundPlayer/SoundPlayer';
 import Intro from '../../screens/Intro/Intro';
 import Start from '../../screens/Start/Start.jsx';
+import StatsGenerator from '../../screens/StatsGenerator/StatsGenerator';
 
 
 export default function AppUI() {
 
   const { screen } = useContext(SelectorsContext)
-  console.log(screen)
 
   /*Rendering*/
   return (
@@ -27,6 +27,8 @@ export default function AppUI() {
       {screen === "Intro" ? <Intro /> : null}
 
       {screen === "MainMenu" ? <MainMenu /> : null}
+
+      {screen === "StatsGenerator" ? <StatsGenerator /> : null} 
     </>
   );
 }
