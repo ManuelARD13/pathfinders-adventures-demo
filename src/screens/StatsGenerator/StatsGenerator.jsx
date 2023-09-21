@@ -90,8 +90,7 @@ function StatsGenerator(){
         /*Set States and Continue */
         let stats = createStatsObj(diceRolls)
         setStats(stats)
-        setScreen("CreateCharacterScreen")
-        
+        setScreen("Main")
     }
 
     return(

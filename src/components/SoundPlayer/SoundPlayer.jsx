@@ -16,8 +16,14 @@ function SoundPlayer () {
 
   return(
     <>
-      { screen !== "StatsGenerator" ? <audio src={mainMenuTrack} autoPlay loop /> : null }
-      { screen === "StatsGenerator" ? <audio src={tavernTrack} autoPlay loop /> : null }  
+      { 
+        screen !== "StatsGenerator" &&
+        screen !== "Main" ? <audio src={mainMenuTrack} autoPlay loop /> : null }
+      {
+       screen === "StatsGenerator" ||
+       (screen === "Main" && selectionStage === "razes") ? <audio src={tavernTrack} autoPlay loop /> 
+       : null 
+      }  
     </>
   )
 }

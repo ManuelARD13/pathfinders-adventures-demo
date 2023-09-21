@@ -12,6 +12,7 @@ import SoundPlayer from '../SoundPlayer/SoundPlayer';
 import Intro from '../../screens/Intro/Intro';
 import Start from '../../screens/Start/Start.jsx';
 import StatsGenerator from '../../screens/StatsGenerator/StatsGenerator';
+import Main from '../../screens/Main/Main';
 
 
 export default function AppUI() {
@@ -29,6 +30,7 @@ export default function AppUI() {
       {screen === "MainMenu" ? <MainMenu /> : null}
 
       {screen === "StatsGenerator" ? <StatsGenerator /> : null} 
+      {screen === "Main" ? <Main /> : null }
     </>
   );
 }

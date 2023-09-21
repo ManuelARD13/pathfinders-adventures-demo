@@ -1,0 +1,19 @@
+.statsTable {
+  border: 1px solid #CCAE27;
+  padding: 0 1vw 1vh 0;
+  font-size: 0.8rem;
+  margin: 1vh 0;
+  background-color: rgba(0,0,0, 0.8);
+  cursor: pointer;
+  user-select: none;
+  transition: 0.3s ease-in-out;
+}
+
+.statsTable th {
+  font-size: 0.9rem;
+  text-shadow: 0 3px 1px rgba(0,0,0);
+}
+
+.statsTable td {
+  padding: 0 2vw;
+}
