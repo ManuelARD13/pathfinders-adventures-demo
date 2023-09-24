@@ -2,9 +2,7 @@ import React, { useContext } from "react"
 import "./StatsList.css"
 import { GameDataContext } from "Context/GameDataContext"
 
-function StatsList () {
-
-  const  { characterStats, raze } = useContext(GameDataContext)
+function StatsList ({ characterStats, raze }) {
 
   return(
     <div className="modifiersTable">

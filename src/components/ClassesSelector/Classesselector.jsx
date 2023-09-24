@@ -88,7 +88,7 @@ function ClassesSelector() {
         {isSelectable ? <p className="yesScoreMessage">Great! You've enough Stats Scores.</p> : <p className="noScoreMessage">Sorry. No enough Stats Scores.</p>}
 
         <div>
-          <StatsList />
+          <StatsList characterStats={characterStats} raze={raze} />
         </div>
 
         <p className="divider"></p>

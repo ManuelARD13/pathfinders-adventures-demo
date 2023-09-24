@@ -21,7 +21,7 @@ function MainMenu() {
                     <input 
                         type="button" 
                         value="Load Game" 
-                        // onClick={() => setScreen("LoadGameScreen")} 
+                        onClick={() => setScreen("LoadGame")} 
                     />
                 </form>
                 {/* Copyright text and message. */}

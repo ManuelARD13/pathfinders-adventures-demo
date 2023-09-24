@@ -8,7 +8,7 @@ import femaleIcon from 'Img/female.png';
 import papyrus from 'Img/papyrus.png';
 
 function RazesSelector() {
-  const { name, dispatch, gender, useSelectGender, playableRazes, raze, useSelectRaze } = useContext(GameDataContext);
+  const { name, dispatch, gender, useSelectGender, playableRazes, characterStats, raze, useSelectRaze } = useContext(GameDataContext);
 
   const getUserTextInput = (e) => {
     let userInput = e.target.value;
@@ -63,7 +63,7 @@ function RazesSelector() {
           ></label>
         </div>
 
-        <StatsList />
+        <StatsList characterStats={characterStats} raze={raze} />
 
         <p>Choose your raze</p>
         <form className="formRazes">

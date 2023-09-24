@@ -1,0 +1,285 @@
+.loadingGameScreen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://i.imgur.com/svtJbZs.jpg");
+  background-size: cover;
+  font-family: "Eagle Lake", cursive;
+  text-shadow: 0 3px 1px rgba(0,0,0);
+}
+
+.LoadingGameSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0,0,0, 0.2);
+  border: 1px solid #d9952e;
+  min-width: 75vw;
+  min-height: 90vh;
+}
+
+.LoadingGameSection h2 {
+  font-size: 1rem;
+}
+
+.loadGameMenu {
+  background-color: rgba(0,0,0,0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: overlay;
+  min-width: 54.5vw;
+  min-height: 83.5vh;
+  width: 54.5vw;
+  height: 83.5vh;
+  border: 3px solid #d9952e;
+  border-radius: 1vw;
+}
+
+.loadGameMenu::-webkit-scrollbar {
+  display: none;
+}
+
+.loadGameMenu:hover::-webkit-scrollbar {
+  display: initial;
+ }
+
+.loadGameMenu::-webkit-scrollbar-thumb {
+ background-color: #976820;
+ border-radius: 1vw;
+}
+
+.titlesBar {
+  display: grid;
+  grid-template-columns: 42.5vw 12vw;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  border: 3px solid #d9952e;
+  width: 54.5vw;
+  border-radius: 1vh;
+  margin-bottom: 0.3vh;
+  font-size: 1rem;
+  font-weight: bolder;
+  background: rgba(0,0,0,0.7);
+}
+
+.titlesBar p {
+  padding-left: 1vw;
+}
+
+.titlesBar h2 {
+  position: relative;
+  width: 97%;
+  height: 3.5vh;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  border: 4px solid #d9952e;
+  border-radius: 1vh;
+  box-shadow: 0 0 3px rgba(0,0,0);
+  text-align: center;
+  z-index: 10;
+}
+
+.characterContainer  {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1vw;
+  height: 24.5vh;
+  align-content: center;
+  align-items: center;
+  max-width: 54vw;
+  border-radius: 1vw;
+  background: rgba(0,0,0,0.7);
+}
+
+.loadingGameScreen label {
+  margin-bottom: 0.5vh;
+  border: 3px solid #e6c088;
+  border-radius: 0.5vw;
+}
+
+.loadingGameScreen input[type="radio"]:checked + label {
+  border: 3px solid rgb(0, 255, 64);
+  box-shadow: inset 0 0 5vw rgb(0, 255, 64);
+  transition: 0.2s ease-in-out;
+}
+
+.selectionBox {
+  display: none;
+} 
+
+.characterContainer .characterThumbnails {
+  grid-column: 1/span 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 0.5vw;
+}
+
+.characterPicture {
+  position: relative;
+  max-height: 23vh;
+  min-width: 23.5vh;
+  width: 23.5vh;
+  border: 1px solid #d9952e;
+  border-radius: 3%;
+}
+
+.characterPicture img {
+  max-height: 23vh;
+  min-width: 23.5vh;
+  width: 23.5vh;
+}
+
+.characterPictureSpanded {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 5%;
+  left: 30%;
+  height: 40vh;
+  border: 1px solid #d9952e;
+  background-size: cover;
+  background-color: rgba(0,0,0, 0.4);
+  background-blend-mode: overlay;
+  z-index: 10;
+  transform: scale(0.1);
+  transition: 0.3s ease-in-out;
+} 
+
+.characterPictureSpanded img {
+  max-height: 40vh;
+  height: 40vh;
+  width: 40vh;
+  
+}
+
+.characterPictureSpanded:hover {
+  opacity: 1;
+  visibility: visible;
+  margin-top: 5%;
+  margin-left: 30%;
+}
+
+.characterPicture:hover .characterPictureSpanded{
+  opacity: 1;
+  visibility: visible;
+  margin-top: 30%;
+  margin-left: 30%;
+  height: 40vh;
+  max-height: 40vh;
+  transform: scale(1);
+  transition: 0.3s ease-in-out;
+}
+
+.characterContainer .characterLogo {
+  position: relative;
+  max-height: 23.5vh;
+  min-width: 23.5vh;
+  width: 23.5vh;
+}
+
+.characterContainer .characterLogo img  {
+  max-height: 23vh;
+  min-width: 23.5vh;
+  width: 23.5vh;
+  border: 1px solid #d9952e;
+  border-radius: 3%;
+}
+
+.characterStatsSpanded {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  z-index: 10;
+  transform: scale(0.1);
+  transition: 0.3s ease-in-out;
+}
+
+.characterContainer .characterLogo:hover .characterStatsSpanded {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: 0.3s ease-in-out;
+}
+
+.loadingGameScreen .characterDetails {
+  grid-column: 2/span 1;
+  display: grid;
+  grid-template-columns: 16vw 12vw;
+  grid-template-rows: 17vh 8vh;
+}
+
+.characterDetails .characterInfo {
+  grid-column: 1/span 1;
+  grid-row: 1/span 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 0.8rem;
+}
+
+.characterDetails .userDetails {
+  grid-column: 2/span 1;
+  grid-row: 1/span 1;
+  border: 3px solid #d9952e;
+  border-radius: 1vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1.5vw 1.5vw 1.5vw;
+  align-content: center;
+  padding-left: 0.5vw;
+  background: rgba(0,0,0,0.9);
+}
+
+.characterDetails .userDetails p {
+  text-justify: distribute;
+}
+
+.characterDetails .dateTime {
+  grid-column: 1/-1;
+}
+
+.characterDetails .infoBar {
+  grid-column: 1/ -1;
+  grid-row: 2/span 1;
+  border: 3px solid #d9952e;
+  border-radius: 1vh;
+  display: flex;
+  align-items: center;
+  padding-left: 1.5vw;
+  font-size: 1.2rem;
+  font-style: italic;
+  letter-spacing: 0.05rem;
+  background: rgba(0,0,0,0.9);
+}
+
+.buttonContainer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 5%;
+  height: 6vh;
+  width: 54.5vw;
+  background-color: #d9952e;
+  border-radius: 0 0 1vw 1vw;
+  z-index: 20;
+}
+
+.buttonContainer .continueButton {
+  width: 30vw;
+  margin-bottom: 0.5vh;
+}
+
+.emptyCharacterContainer {
+  min-height: 32vh;
+}

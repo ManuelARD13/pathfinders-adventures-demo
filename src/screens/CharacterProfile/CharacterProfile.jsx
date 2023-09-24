@@ -5,13 +5,11 @@ import "./CharacterProfile.css"
 import StatsList from "Common/StatsList/StatsList";
 import MainImageDisplay from "Components/MainImageDisplay/MainImageDisplay";
 
-
-
-
-
 function CharacterProfile () {
   
   const { setCharacter, name, gender, raze, cClass, img, characterStats, setScreen, savedCharacters } = useContext(GameDataContext)
+
+  console.log(characterStats)
 
 	/*TODO: Move createNewCharacterObj outside this component to combine both this and loadedCharacterProfile component*/
 
@@ -87,7 +85,7 @@ function CharacterProfile () {
         <p>HP: {HP}</p>
         <p>DEF: {DEF}</p>
 
-          <StatsList />
+          <StatsList characterStats={characterStats} raze={raze} />
 
         <h5>Raze Skills</h5>
         <p className="divider"></p>

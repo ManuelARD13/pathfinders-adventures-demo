@@ -89,6 +89,7 @@ function StatsGenerator(){
     const createStats = (diceRolls) => {
         /*Set States and Continue */
         let stats = createStatsObj(diceRolls)
+        console.log(stats)
         setStats(stats)
         setScreen("Main")
     }
