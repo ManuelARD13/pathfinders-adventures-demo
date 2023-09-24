@@ -2,12 +2,12 @@ import React, { useEffect, useState, useContext } from 'react';
 
 import './ClassesSelector.css';
 
-import { SelectorsContext } from '../../context/SelectorsCtx';
+import { GameDataContext } from '../../context/GameDataContext';
 import StatsList from '../../common/StatsList/StatsList';
 import ClassIcon from '../../common/ClassIcon/ClassIcon';
 
 function ClassesSelector() {
-  const { playableClasses, setSelectionStage, gender, raze, cClass, characterStats, dispatch, isSelectable, setSelectable } = useContext(SelectorsContext);
+  const { playableClasses, setSelectionStage, gender, raze, cClass, characterStats, dispatch, isSelectable, setSelectable } = useContext(GameDataContext);
 
   const [classRequirements, setClassRequirements] = useState(false);
 

@@ -1,10 +1,10 @@
 import React, { useContext } from "react"
 import "./StatsList.css"
-import { SelectorsContext } from "../../context/SelectorsCtx"
+import { GameDataContext } from "../../context/GameDataContext"
 
 function StatsList () {
 
-  const  { characterStats, raze } = useContext(SelectorsContext)
+  const  { characterStats, raze } = useContext(GameDataContext)
 
   return(
     <div className="modifiersTable">

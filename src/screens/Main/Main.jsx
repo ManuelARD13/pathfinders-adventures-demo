@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { SelectorsContext } from "../../context/SelectorsCtx";
+import { GameDataContext } from "../../context/GameDataContext";
 
 import "./Main.css"
 
@@ -10,7 +10,7 @@ import ClassesSelector from "../../components/ClassesSelector/Classesselector";
 
 function Main(){
 
-  const { raze, selectionStage } = useContext(SelectorsContext)
+  const { raze, selectionStage } = useContext(GameDataContext)
  
   return(
       <section 

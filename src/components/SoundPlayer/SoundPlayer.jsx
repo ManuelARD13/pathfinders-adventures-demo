@@ -7,12 +7,12 @@ import humanTrack from "../../audio/human.mp3"
 import elfTrack from "../../audio/elf.mp3"
 import orcTrack from "../../audio/orc.mp3"
 import dwarfTrack from "../../audio/dwarf.mp3"
-import { SelectorsContext } from "../../context/SelectorsCtx";
+import { GameDataContext } from "../../context/GameDataContext";
 
 
 function SoundPlayer () {
 
-  const { screen, selectionStage, raze } = useContext(SelectorsContext)
+  const { screen, selectionStage, raze } = useContext(GameDataContext)
 
   const applyRazeBKMusic = () => {
   	if(raze.razeName === "human"){

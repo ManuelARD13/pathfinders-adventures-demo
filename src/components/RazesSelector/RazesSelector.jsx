@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { SelectorsContext } from '../../context/SelectorsCtx';
+import { GameDataContext } from '../../context/GameDataContext';
 
 import './RazesSelector.css';
 import StatsList from '../../common/StatsList/StatsList';
@@ -8,7 +8,7 @@ import femaleIcon from '../../img/female.png';
 import papyrus from '../../img/papyrus.png';
 
 function RazesSelector() {
-  const { name, dispatch, gender, useSelectGender, playableRazes, raze, useSelectRaze } = useContext(SelectorsContext);
+  const { name, dispatch, gender, useSelectGender, playableRazes, raze, useSelectRaze } = useContext(GameDataContext);
 
   const getUserTextInput = (e) => {
     let userInput = e.target.value;

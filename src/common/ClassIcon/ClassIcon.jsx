@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { SelectorsContext } from '../../context/SelectorsCtx';
+import { GameDataContext } from '../../context/GameDataContext';
 
 function ClassIcon({ totalScores, pClass }) {
-  const { useSelectClass } = useContext(SelectorsContext);
+  const { useSelectClass } = useContext(GameDataContext);
   const [isSelectableIcon, setSelectableIcon] = useState(true);
 
   useEffect(() => {

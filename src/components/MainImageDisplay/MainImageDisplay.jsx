@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import { SelectorsContext } from "../../context/SelectorsCtx";
+import { GameDataContext } from "../../context/GameDataContext";
 
 function MainImageDisplay() {
 
-  const { img, isSelectable } = useContext(SelectorsContext)
+  const { img, isSelectable } = useContext(GameDataContext)
   
   return(
   	<div className="displayImgContainer">

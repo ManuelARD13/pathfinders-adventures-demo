@@ -2,9 +2,9 @@ import React, { useEffect, useReducer } from 'react';
 import { useState } from 'react';
 import gameData from '../gameData/data.json';
 
-const SelectorsContext = React.createContext({});
+const GameDataContext = React.createContext({});
 
-function SelectorsCtx({ children }) {
+function GameDataCtx({ children }) {
   
     // Game Data States
   const [playableRazes, setRazes] = useState([])
@@ -172,7 +172,7 @@ function SelectorsCtx({ children }) {
   const [isSelectable, setSelectable] = useState("")
 
   return (
-    <SelectorsContext.Provider
+    <GameDataContext.Provider
       value={{
         screen,
         setScreen,
@@ -207,8 +207,8 @@ function SelectorsCtx({ children }) {
       }}
     >
       {children}
-    </SelectorsContext.Provider>
+    </GameDataContext.Provider>
   );
 }
 
-export { SelectorsContext, SelectorsCtx };
+export { GameDataContext, GameDataCtx };

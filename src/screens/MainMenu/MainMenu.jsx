@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
 import "./MainMenu.css"
 import pathfinderLogo from "../../img/pathfinderLogo.png"
-import { SelectorsContext } from "../../context/SelectorsCtx";
+import { GameDataContext } from "../../context/GameDataContext";
 
 function MainMenu() {
 
-    const { setScreen } = useContext(SelectorsContext)
+    const { setScreen } = useContext(GameDataContext)
 
     return(
         <section className="mainMenu">

@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import "./Intro.css"
-import { SelectorsContext } from "../../context/SelectorsCtx";
+import { GameDataContext } from "../../context/GameDataContext";
 
 function Intro(){
 
-     const { setScreen } = useContext(SelectorsContext)
+     const { setScreen } = useContext(GameDataContext)
     
     /*Animated Transition*/
      setTimeout(() => setScreen("MainMenu"), 14000)

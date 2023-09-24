@@ -1,11 +1,11 @@
 import React from 'react';
 import AppUI from './components/AppUI/AppUI';
-import { SelectorsCtx } from './context/SelectorsCtx';
+import { GameDataCtx } from './context/GameDataContext';
 
 export default function App() {
   return (
-    <SelectorsCtx>
+    <GameDataCtx>
       <AppUI />
-    </SelectorsCtx>
+    </GameDataCtx>
   );
 }

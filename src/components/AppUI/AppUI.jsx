@@ -1,9 +1,7 @@
 import React, { useContext } from 'react';
-import { SelectorsContext } from '../../context/SelectorsCtx';
+import { GameDataContext } from '../../context/GameDataContext';
 
-// import { DisplayScreen } from '../DisplayScreen/DisplayScreen';
 import MainMenu from '../../screens/MainMenu/MainMenu';
-// import { DiceRoll } from '../DiceRoll/DiceRoll';
 // import { CharacterProfile } from '../CharacterProfile/CharacterProfile';
 // import { Acknoledgements } from '../Acknoledgements/Acknoledgements';
 // import { LoadGame } from '../LoadGame/LoadGame';
@@ -17,7 +15,7 @@ import Main from '../../screens/Main/Main';
 
 export default function AppUI() {
 
-  const { screen } = useContext(SelectorsContext)
+  const { screen } = useContext(GameDataContext)
 
   /*Rendering*/
   return (

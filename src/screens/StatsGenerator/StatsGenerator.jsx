@@ -1,10 +1,10 @@
 import React, { useState ,useContext, useEffect } from "react";
 import "./StatsGenerator.css"
-import { SelectorsContext } from "../../context/SelectorsCtx";
+import { GameDataContext } from "../../context/GameDataContext";
 
 function StatsGenerator(){
 
-    const  { setStats, setScreen }  = useContext(SelectorsContext)
+    const  { setStats, setScreen }  = useContext(GameDataContext)
     const [diceRolled, setDiceRolled] = useState(false)
 
     const createStatsObj = (diceRolls) => ({

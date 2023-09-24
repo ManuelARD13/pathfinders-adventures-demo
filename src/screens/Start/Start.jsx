@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
 import './Start.css';
-import { SelectorsContext } from "../../context/SelectorsCtx";
+import { GameDataContext } from "../../context/GameDataContext";
 import diceGoblin from '../../img/diceGoblin.png';
 
 function Start() {
 
-  const { setScreen, setSavedCharacters } = useContext(SelectorsContext);
+  const { setScreen, setSavedCharacters } = useContext(GameDataContext);
 
   const localStorageCharacters = localStorage.getItem('savedCharacters_V1');
 
