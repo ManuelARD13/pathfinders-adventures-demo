@@ -1,0 +1,52 @@
+.GreetingsScreen {
+  display: grid;
+  grid-template-columns: 47vw 53vw;
+  gap: 4vw;
+  height: 100vh;
+  background-color: black;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.GreetingsScreen .imageContainer {
+  grid-column: 1/1;
+  grid-row: 1/span1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.GreetingsScreen .messageContainer {
+  max-width: 40vw;
+  font-size: 1.1rem;
+  font-family: 'Eagle Lake', cursive;
+  text-shadow: 0 3px 1px rgba(0,0,0);
+}
+
+.GreetingsScreen .messageContainer h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1vh;
+}
+
+.GreetingsScreen .messageContainer .mainMessage {
+  line-height: 1.7rem;
+  margin: 4vh 0;
+}
+
+.GreetingsScreen .messageContainer .mainMessage > p {
+  margin: 1.5vh 0;
+}
+
+.GreetingsScreen .messageContainer .linkMessage {
+  font-size: 0.8rem;
+  margin: 2vh 0;
+}
+
+.GreetingsScreen .messageContainer .linkMessage a {
+  color: #CCAE27;
+}
+
+.GreetingsScreen input {
+  width: 20vw;
+  margin-top: 4vh;
+}

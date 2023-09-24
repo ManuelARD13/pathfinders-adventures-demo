@@ -30,13 +30,18 @@ function SoundPlayer () {
     <>
       { 
         screen !== "StatsGenerator" &&
-        screen !== "Main" ? <audio src={mainMenuTrack} autoPlay loop /> : null }
+        screen !== "Main" &&
+        screen !== "CharacterProfile" ? <audio src={mainMenuTrack} autoPlay loop /> : null }
       {
        screen === "StatsGenerator" ||
        (screen === "Main" && selectionStage === "razes") ? <audio src={tavernTrack} autoPlay loop /> 
        : null 
       }
-      { selectionStage === "classes" && screen !== "Acknoledgements" ? <audio src={applyRazeBKMusic()} autoPlay loop /> : null }  
+      { 
+        selectionStage === "classes" && screen !== "Acknoledgements" 
+        ? <audio src={applyRazeBKMusic()} autoPlay loop /> 
+        : null 
+      }  
     </>
   )
 }
