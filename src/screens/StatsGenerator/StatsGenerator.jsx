@@ -1,6 +1,6 @@
 import React, { useState ,useContext, useEffect } from "react";
 import "./StatsGenerator.css"
-import { GameDataContext } from "../../context/GameDataContext";
+import { GameDataContext } from "Context/GameDataContext";
 
 function StatsGenerator(){
 

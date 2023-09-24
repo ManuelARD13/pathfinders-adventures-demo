@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import "./MainMenu.css"
-import pathfinderLogo from "../../img/pathfinderLogo.png"
-import { GameDataContext } from "../../context/GameDataContext";
+import pathfinderLogo from "Img/pathfinderLogo.png"
+import { GameDataContext } from "Context/GameDataContext";
 
 function MainMenu() {
 

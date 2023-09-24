@@ -1,6 +1,6 @@
 import React from 'react';
-import AppUI from './components/AppUI/AppUI';
-import { GameDataCtx } from './context/GameDataContext';
+import AppUI from 'Components/AppUI/AppUI';
+import { GameDataCtx } from 'Context/GameDataContext';
 
 export default function App() {
   return (

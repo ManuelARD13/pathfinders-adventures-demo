@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import './Start.css';
-import { GameDataContext } from "../../context/GameDataContext";
-import diceGoblin from '../../img/diceGoblin.png';
+import { GameDataContext } from "Context/GameDataContext";
+import diceGoblin from 'Img/diceGoblin.png';
 
 function Start() {
 

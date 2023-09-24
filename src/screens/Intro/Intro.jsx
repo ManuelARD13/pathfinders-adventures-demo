@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import "./Intro.css"
-import { GameDataContext } from "../../context/GameDataContext";
+import { GameDataContext } from "Context/GameDataContext";
 
 function Intro(){
 

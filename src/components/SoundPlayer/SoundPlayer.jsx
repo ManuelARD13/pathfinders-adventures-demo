@@ -1,13 +1,13 @@
 import React, { useContext } from "react";
 
 
-import mainMenuTrack  from "../../audio/mainMenu.mp3"
-import  tavernTrack  from "../../audio/tavern.mp3"
-import humanTrack from "../../audio/human.mp3"
-import elfTrack from "../../audio/elf.mp3"
-import orcTrack from "../../audio/orc.mp3"
-import dwarfTrack from "../../audio/dwarf.mp3"
-import { GameDataContext } from "../../context/GameDataContext";
+import mainMenuTrack  from "Audio/mainMenu.mp3"
+import  tavernTrack  from "Audio/tavern.mp3"
+import humanTrack from "Audio/human.mp3"
+import elfTrack from "Audio/elf.mp3"
+import orcTrack from "Audio/orc.mp3"
+import dwarfTrack from "Audio/dwarf.mp3"
+import { GameDataContext } from "Context/GameDataContext";
 
 
 function SoundPlayer () {

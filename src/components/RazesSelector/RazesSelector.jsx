@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
-import { GameDataContext } from '../../context/GameDataContext';
+import { GameDataContext } from 'Context/GameDataContext';
 
 import './RazesSelector.css';
-import StatsList from '../../common/StatsList/StatsList';
-import maleIcon from '../../img/male.png';
-import femaleIcon from '../../img/female.png';
-import papyrus from '../../img/papyrus.png';
+import StatsList from 'Common/StatsList/StatsList';
+import maleIcon from 'Img/male.png';
+import femaleIcon from 'Img/female.png';
+import papyrus from 'Img/papyrus.png';
 
 function RazesSelector() {
   const { name, dispatch, gender, useSelectGender, playableRazes, raze, useSelectRaze } = useContext(GameDataContext);

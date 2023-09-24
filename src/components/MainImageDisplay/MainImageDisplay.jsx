@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { GameDataContext } from "../../context/GameDataContext";
+import { GameDataContext } from "Context/GameDataContext";
 
 function MainImageDisplay() {
 

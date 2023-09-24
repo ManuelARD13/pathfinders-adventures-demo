@@ -3,9 +3,9 @@ import { GameDataContext } from "../../context/GameDataContext";
 
 import "./Main.css"
 
-import MainImageDisplay from "../../components/MainImageDisplay/MainImageDisplay";
-import RazesSelector from "../../components/RazesSelector/RazesSelector";
-import ClassesSelector from "../../components/ClassesSelector/Classesselector";
+import MainImageDisplay from "Components/MainImageDisplay/MainImageDisplay";
+import RazesSelector from "Components/RazesSelector/RazesSelector";
+import ClassesSelector from "Components/ClassesSelector/Classesselector";
 
 
 function Main(){

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { GameDataContext } from '../../context/GameDataContext';
+import { GameDataContext } from 'Context/GameDataContext';
 
 function ClassIcon({ totalScores, pClass }) {
   const { useSelectClass } = useContext(GameDataContext);

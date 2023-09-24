@@ -2,9 +2,9 @@ import React, { useEffect, useState, useContext } from 'react';
 
 import './ClassesSelector.css';
 
-import { GameDataContext } from '../../context/GameDataContext';
-import StatsList from '../../common/StatsList/StatsList';
-import ClassIcon from '../../common/ClassIcon/ClassIcon';
+import { GameDataContext } from 'Context/GameDataContext';
+import StatsList from 'Common/StatsList/StatsList';
+import ClassIcon from 'Common/ClassIcon/ClassIcon';
 
 function ClassesSelector() {
   const { playableClasses, setSelectionStage, gender, raze, cClass, characterStats, dispatch, isSelectable, setSelectable } = useContext(GameDataContext);

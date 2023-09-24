@@ -1,6 +1,6 @@
 import React, { useEffect, useReducer } from 'react';
 import { useState } from 'react';
-import gameData from '../gameData/data.json';
+import gameData from 'GameData/data.json';
 
 const GameDataContext = React.createContext({});
 

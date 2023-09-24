@@ -1,16 +1,16 @@
 import React, { useContext } from 'react';
-import { GameDataContext } from '../../context/GameDataContext';
+import { GameDataContext } from 'Context/GameDataContext';
 
-import MainMenu from '../../screens/MainMenu/MainMenu';
+import MainMenu from 'Screens/MainMenu/MainMenu';
 // import { CharacterProfile } from '../CharacterProfile/CharacterProfile';
 // import { Acknoledgements } from '../Acknoledgements/Acknoledgements';
 // import { LoadGame } from '../LoadGame/LoadGame';
 // import { LoadedCharacterProfile } from '../LoadedCharacterProfile/LoadedCharacterProfile';
-import SoundPlayer from '../SoundPlayer/SoundPlayer';
-import Intro from '../../screens/Intro/Intro';
-import Start from '../../screens/Start/Start.jsx';
-import StatsGenerator from '../../screens/StatsGenerator/StatsGenerator';
-import Main from '../../screens/Main/Main';
+import SoundPlayer from 'Components/SoundPlayer/SoundPlayer';
+import Intro from 'Screens/Intro/Intro';
+import Start from 'Screens/Start/Start.jsx';
+import StatsGenerator from 'Screens/StatsGenerator/StatsGenerator';
+import Main from 'Screens/Main/Main';
 
 
 export default function AppUI() {
