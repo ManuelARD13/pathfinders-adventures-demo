@@ -12,7 +12,19 @@ import { SelectorsContext } from "../../context/SelectorsCtx";
 
 function SoundPlayer () {
 
-  const { screen, selectionStage } = useContext(SelectorsContext)
+  const { screen, selectionStage, raze } = useContext(SelectorsContext)
+
+  const applyRazeBKMusic = () => {
+  	if(raze.razeName === "human"){
+      return(humanTrack)
+    } else if(raze.razeName === "elf"){
+      return(elfTrack)
+    } else if(raze.razeName === "orc"){
+      return(orcTrack)
+    }  else if(raze.razeName === "dwarf"){
+      return(dwarfTrack)
+    }
+  }
 
   return(
     <>
@@ -23,7 +35,8 @@ function SoundPlayer () {
        screen === "StatsGenerator" ||
        (screen === "Main" && selectionStage === "razes") ? <audio src={tavernTrack} autoPlay loop /> 
        : null 
-      }  
+      }
+      { selectionStage === "classes" && screen !== "Acknoledgements" ? <audio src={applyRazeBKMusic()} autoPlay loop /> : null }  
     </>
   )
 }

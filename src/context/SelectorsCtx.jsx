@@ -68,7 +68,7 @@ function SelectorsCtx({ children }) {
 
   useEffect(() => {
     /*Character Images Display */
-    if(cClass.length > 0)
+    if(cClass)
     {
       if (Object.keys(cClass).length === 0) {
         dispatch({
@@ -153,7 +153,23 @@ function SelectorsCtx({ children }) {
     }
   }
 
-  
+  const useSelectClass = (e) => {
+    dispatch({
+      type: "SET_CLASS",
+      payload: playableClasses.find(
+        (pClass) => pClass.className === e.target.id
+      )
+    })
+    // Separate this logic
+     const comfirmButton = document.getElementById("comfirmClass")
+
+     if (isSelectable === true) {
+       comfirmButton.disabled = false
+       comfirmButton.addEventListener("click", () => setScreen("CharacterProfile"))
+     }
+  }
+
+  const [isSelectable, setSelectable] = useState("")
 
   return (
     <SelectorsContext.Provider
@@ -178,9 +194,15 @@ function SelectorsCtx({ children }) {
         img,
         raze,
         gender,
+        raze,
+        cClass,
+
+        isSelectable,
+        setSelectable,
 
         useSelectGender,
-        useSelectRaze
+        useSelectRaze,
+        useSelectClass
 
       }}
     >
