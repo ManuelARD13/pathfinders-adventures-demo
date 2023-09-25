@@ -165,11 +165,63 @@ function GameDataCtx({ children }) {
 
      if (isSelectable === true) {
        comfirmButton.disabled = false
-       comfirmButton.addEventListener("click", () => setScreen("CharacterProfile"))
+       comfirmButton.addEventListener("click", () => {
+        finishCharacterProcess()
+        setScreen("CharacterProfile")
+      })
      }
   }
 
   const [isSelectable, setSelectable] = useState("")
+  const [character, setCharacter] = useState({})
+
+  const createCharacterProfileImg = (gender, raze, cClass) => {
+    if (raze.razeName === 'human') {
+      return gender === 'male' ? cClass.classImages.human.maleProfile : cClass.classImages.human.femaleProfile;
+    } else if (raze.razeName === 'elf') {
+      return gender === 'male' ? cClass.classImages.elf.maleProfile : cClass.classImages.elf.femaleProfile;
+    } else if (raze.razeName === 'orc') {
+      return gender === 'male' ? cClass.classImages.orc.maleProfile : cClass.classImages.orc.femaleProfile;
+    } else if (raze.razeName === 'dwarf') {
+      return gender === 'male' ? cClass.classImages.dwarf.maleProfile : cClass.classImages.dwarf.femaleProfile;
+    }
+  };
+
+  const calculateWeight = (minWeight, maxWeight) => Math.floor(minWeight + Math.random() * (maxWeight - minWeight));
+
+  const createNewCharacterObj = (name, gender, raze, cClass, img, stats, level) => ({
+    /*Constructor*/
+    playerId: '00' + Math.floor(Math.random() * 100),
+    savedTimestamp: new Date().toLocaleString(),
+    name: name,
+    gender: gender,
+    raze: raze,
+    cClass: cClass,
+    characterProfileImg: createCharacterProfileImg(gender, raze, cClass),
+    img: img,
+    stats: stats,
+    level: level,
+    HP: raze.razeModifiers.CON + Math.floor((stats.CON - 10) / 2) + cClass.hitPoints,
+    ATK: '1d' + cClass.hitPoints + ' + ' + (raze.razeModifiers.STR + Math.floor((stats.STR - 10) / 2)),
+    DEF: 10 + raze.razeModifiers.DEX + Math.floor((stats.DEX - 10) / 2),
+    weight: gender === 'female' ? calculateWeight(120, 210) + ' Pounds' : calculateWeight(155, 265) + ' Pounds',
+    // height: this.weight < 168 ? ((Math.random * 10) + 5).toFixed(2) : ((Math.random * 10) + 6).toFixed(2),
+    // TODO: Implement height property
+    level: 1,
+  });
+
+  const saveCharacter = (character) => {
+    /*localStorage*/
+    // savedCharacters.push(character);
+    let parsedSavedCharacters = JSON.stringify([...savedCharacters, character]);
+    localStorage.setItem('savedCharacters_V1', parsedSavedCharacters);
+  };
+
+  const finishCharacterProcess = () => {
+    let usersCharacter = createNewCharacterObj(name, gender, raze, cClass, img, characterStats, 1);
+    saveCharacter(usersCharacter);
+    setCharacter(usersCharacter)
+  };
 
   return (
     <GameDataContext.Provider
@@ -202,7 +254,10 @@ function GameDataCtx({ children }) {
 
         useSelectGender,
         useSelectRaze,
-        useSelectClass
+        useSelectClass,
+
+        character,
+        setCharacter
 
       }}
     >

@@ -55,7 +55,7 @@
 
 .titlesBar {
   display: grid;
-  grid-template-columns: 42.5vw 12vw;
+  grid-template-columns: 30vw 10vw 10vw;
   justify-content: space-between;
   align-items: center;
   position: relative;

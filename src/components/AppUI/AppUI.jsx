@@ -34,7 +34,7 @@ function AppUI() {
 
       {screen === "CharacterProfile" ? <CharacterProfile /> : null }
 
-      {screen === "Acknoledgements" ? <Acknoledgements /> : null }
+      {screen === "Acknowledgements" ? <Acknoledgements /> : null }
     </>
   );
 }

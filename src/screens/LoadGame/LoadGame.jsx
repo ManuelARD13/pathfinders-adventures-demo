@@ -6,7 +6,19 @@ import { GameDataContext } from "Context/GameDataContext";
 
 function LoadGame () {
 
-  const  { character, savedCharacters, setCharacter, setScreen} = useContext(GameDataContext)
+  const  { character, savedCharacters, setSavedCharacters, setCharacter, setScreen} = useContext(GameDataContext)
+
+  const deleteAll = () => {
+    localStorage.removeItem('savedCharacters_V1');
+    localStorage.setItem('savedCharacters_V1', '[]');
+    setSavedCharacters([]);
+  }
+
+  const deleteCharacter = (characterName) => {
+    let newSavedCharacters = savedCharacters.filter((savedcharacter) => savedcharacter.name !== characterName)
+    localStorage.setItem('savedCharacters_V1', JSON.stringify(newSavedCharacters));
+    setSavedCharacters(newSavedCharacters)
+  }
 
   const useSelectCharacter = () => {
     let loadedCharacters = Array.from(document.getElementsByClassName("selectionBox"))
@@ -21,6 +33,7 @@ function LoadGame () {
     <section className="loadingGameScreen">
       <div className="titlesBar">
         <p>Select an Adventurer.</p>
+        <button onClick={() => deleteAll()}>DELETE ALL</button>
         <h2>LOAD GAME</h2>
       </div>
       <div className="loadGameMenu">
@@ -29,6 +42,7 @@ function LoadGame () {
             { savedCharacters.length > 0 &&
               savedCharacters.map((character) =>
               <>
+                <button onClick={() => deleteCharacter(character.name)}>DELETE</button>
                 <input type={"radio"} className="selectionBox" name="savedCharacters" id={character.name} onChange={useSelectCharacter}/>
                 <label htmlFor={character.name}>
                   <div className="characterContainer">
