@@ -40,8 +40,8 @@ module.exports = {
         },
       },
       {
-        test: /\.css$/,
-        use: ['css-loader'],
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
       {
         test: /\.(png|jpe?g|gif|mp3)$/i,
