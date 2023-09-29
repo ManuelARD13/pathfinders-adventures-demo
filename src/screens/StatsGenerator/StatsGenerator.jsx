@@ -89,7 +89,6 @@ function StatsGenerator(){
     const createStats = (diceRolls) => {
         /*Set States and Continue */
         let stats = createStatsObj(diceRolls)
-        console.log(stats)
         setStats(stats)
         setScreen("Main")
     }
@@ -193,13 +192,13 @@ function StatsGenerator(){
                     </tbody>
                 </table>
                 <div className="screenButtonsContainer">
-                    <input type="button" value="Return" className="screenButtons" id="continueCharacter3" 
-                        onClick={() => setScreen("MainMenuScreen")} 
+                    <input type="button" value="Return" className="screenButtons"
+                        onClick={() => setScreen("MainMenu")} 
                     />
                     <input type="button" value="Roll Dice!" className="screenButtons" id="buttonDice"
                         onClick={diceRoll} disabled={diceRolled ? true : false} 
                     />
-                    <input type="button" value="Continue" id="continueCharacter3"
+                    <input type="button" value="Continue"
                         className={diceRolled ? "screenButtons pulsate-fwd" : "screenButtons"}  
                         onClick={() => createStats(diceRolls)} 
                     />

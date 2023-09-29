@@ -5,11 +5,13 @@ import './ClassesSelector.css';
 import { GameDataContext } from 'Context/GameDataContext';
 import StatsList from 'Common/StatsList/StatsList';
 import ClassIcon from 'Common/ClassIcon/ClassIcon';
+import Modal from 'Common/Modal/Modal';
 
 function ClassesSelector() {
-  const { playableClasses, setSelectionStage, gender, raze, cClass, characterStats, dispatch, isSelectable, setSelectable } = useContext(GameDataContext);
+  const { playableClasses, setSelectionStage, gender, raze, cClass, characterStats, dispatch, isSelectable, setSelectable, finishCharacterProcess } = useContext(GameDataContext);
 
   const [classRequirements, setClassRequirements] = useState(false);
+  const [isModalOpen, setModalOpen] = useState(false);
 
   /*Creating totalScores Object for classRequirements comparisons*/
   const totalScores = {};
@@ -99,7 +101,7 @@ function ClassesSelector() {
           ))}
         </form>
       </div>
-      <input type="button" className="continueButton" value="Comfirm Selections" id="comfirmClass" disabled={isSelectable === false ? true : false} />
+      <input type="button" className="continueButton" value="Comfirm Selections" id="comfirmClass" onClick={() => setModalOpen(true)} />
       <div className="displayClassesDescriptionContainer">
         {Object.keys(cClass).length !== 0 ? (
           <>
@@ -129,6 +131,19 @@ function ClassesSelector() {
           </p>
         )}
       </div>
+      {isModalOpen && 
+        <Modal>
+          <div>
+            <div>
+              <p>{cClass.className}</p>
+              <img src={cClass.classIcon}></img>
+            </div>
+            <h3>Are you sure?</h3>
+            <button onClick={() => setModalOpen(false)}>Cancel</button>
+            <button onClick={finishCharacterProcess}>Continue</button>
+          </div>
+        </Modal>
+      }
     </>
   );
 }

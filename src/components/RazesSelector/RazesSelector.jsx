@@ -8,7 +8,7 @@ import femaleIcon from 'Img/female.png';
 import papyrus from 'Img/papyrus.png';
 
 function RazesSelector() {
-  const { name, dispatch, gender, useSelectGender, playableRazes, characterStats, raze, useSelectRaze } = useContext(GameDataContext);
+  const { name, dispatch, gender, selectGender, playableRazes, characterStats, raze, selectRaze } = useContext(GameDataContext);
 
   const getUserTextInput = (e) => {
     let userInput = e.target.value;
@@ -42,7 +42,7 @@ function RazesSelector() {
 
         <legend>Select Gender</legend>
         <div className="genderButtons">
-          <input type={'radio'} name="gender" className="genderRadioSelectors" value="male" id="genderMale" onChange={useSelectGender} required />
+          <input type={'radio'} name="gender" className="genderRadioSelectors" value="male" id="genderMale" onChange={selectGender} required />
           <label
             htmlFor="genderMale"
             className="genderLabels"
@@ -52,7 +52,7 @@ function RazesSelector() {
             }}
           ></label>
 
-          <input type={'radio'} name="gender" className="genderRadioSelectors" value="female" id="genderFemale" onChange={useSelectGender} required />
+          <input type={'radio'} name="gender" className="genderRadioSelectors" value="female" id="genderFemale" onChange={selectGender} required />
           <label
             htmlFor="genderFemale"
             className="genderLabels"
@@ -73,7 +73,7 @@ function RazesSelector() {
 
             return (
               <div className="razeContainer" key={raze.razeName}>
-                <input type="radio" name="razes" className="razesSelectors" id={raze.razeName} style={{ display: 'none' }} onChange={useSelectRaze} disabled={name && gender ? false : true} />
+                <input type="radio" name="razes" className="razesSelectors" id={raze.razeName} style={{ display: 'none' }} onChange={selectRaze} disabled={name && gender ? false : true} />
                 <label className="razesLabels" htmlFor={raze.razeName} id={`${raze.razeName}Label`}>
                   <img src={url} alt={raze.razeName} />
                 </label>

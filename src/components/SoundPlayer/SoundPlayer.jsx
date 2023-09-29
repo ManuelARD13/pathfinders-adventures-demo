@@ -38,7 +38,7 @@ function SoundPlayer () {
        : null 
       }
       { 
-        selectionStage === "classes" && screen !== "Acknoledgements" 
+        selectionStage === "classes" && screen !== "Acknowledgements"
         ? <audio src={applyRazeBKMusic()} autoPlay loop /> 
         : null 
       }  

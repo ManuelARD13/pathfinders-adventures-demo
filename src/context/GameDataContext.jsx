@@ -116,7 +116,7 @@ function GameDataCtx({ children }) {
 
   const [characterStats, setStats] = useState({})
 
-  const useSelectGender = () => {
+  const selectGender = () => {
     // Review logic. Miss functioning with the radio selectors checks.
     const genderFemaleSelector = document.getElementById("genderFemale")
     const genderMaleSelector = document.getElementById("genderMale")
@@ -137,7 +137,8 @@ function GameDataCtx({ children }) {
       : applyMaleGender("male")
   }
 
-  const useSelectRaze = (e) => {
+  const selectRaze = (e) => {
+
     dispatch({
       type: "SET_RAZE",
       payload: playableRazes.find(
@@ -146,30 +147,23 @@ function GameDataCtx({ children }) {
     }
     )
     // Separate this logic
-    if (!!name) {
+
       const comfirmButton = document.getElementById("comfirmSelections")
       comfirmButton.disabled = false
       comfirmButton.addEventListener("click", () => setSelectionStage("classes"))
-    }
+    
   }
 
-  const useSelectClass = (e) => {
+  const selectClass = (e) => {
     dispatch({
       type: "SET_CLASS",
       payload: playableClasses.find(
-        (pClass) => pClass.className === e.target.id
+        (pClass) => { if(pClass.className === e.target.id){
+          return pClass
+        }
+        }
       )
     })
-    // Separate this logic
-     const comfirmButton = document.getElementById("comfirmClass")
-
-     if (isSelectable === true) {
-       comfirmButton.disabled = false
-       comfirmButton.addEventListener("click", () => {
-        finishCharacterProcess()
-        setScreen("CharacterProfile")
-      })
-     }
   }
 
   const [isSelectable, setSelectable] = useState("")
@@ -207,12 +201,10 @@ function GameDataCtx({ children }) {
     weight: gender === 'female' ? calculateWeight(120, 210) + ' Pounds' : calculateWeight(155, 265) + ' Pounds',
     // height: this.weight < 168 ? ((Math.random * 10) + 5).toFixed(2) : ((Math.random * 10) + 6).toFixed(2),
     // TODO: Implement height property
-    level: 1,
   });
 
   const saveCharacter = (character) => {
     /*localStorage*/
-    // savedCharacters.push(character);
     let parsedSavedCharacters = JSON.stringify([...savedCharacters, character]);
     localStorage.setItem('savedCharacters_V1', parsedSavedCharacters);
   };
@@ -221,6 +213,7 @@ function GameDataCtx({ children }) {
     let usersCharacter = createNewCharacterObj(name, gender, raze, cClass, img, characterStats, 1);
     saveCharacter(usersCharacter);
     setCharacter(usersCharacter)
+    setScreen("CharacterProfile")
   };
 
   return (
@@ -252,12 +245,14 @@ function GameDataCtx({ children }) {
         isSelectable,
         setSelectable,
 
-        useSelectGender,
-        useSelectRaze,
-        useSelectClass,
+        selectGender,
+        selectRaze,
+        selectClass,
 
         character,
-        setCharacter
+        setCharacter,
+
+        finishCharacterProcess,
 
       }}
     >

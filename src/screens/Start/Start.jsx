@@ -7,9 +7,11 @@ function Start() {
 
   const { setScreen, setSavedCharacters } = useContext(GameDataContext);
 
-  const localStorageCharacters = localStorage.getItem('savedCharacters_V1');
+  
 
   const initializeLocalStorage = () => {
+    const localStorageCharacters = localStorage.getItem('savedCharacters_V1');
+    
     if (!localStorageCharacters) {
       localStorage.setItem('savedCharacters_V1', '[]');
       setSavedCharacters([]);

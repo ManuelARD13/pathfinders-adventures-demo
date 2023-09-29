@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { GameDataContext } from 'Context/GameDataContext';
 
 function ClassIcon({ totalScores, pClass }) {
-  const { useSelectClass } = useContext(GameDataContext);
+  const { selectClass } = useContext(GameDataContext);
   const [isSelectableIcon, setSelectableIcon] = useState(true);
 
   useEffect(() => {
@@ -29,7 +29,7 @@ function ClassIcon({ totalScores, pClass }) {
   return (
     <div className="classContainer">
       <input type="radio" name="classes" className="classSelectors" id={pClass.className} />
-      <label className="classesLabels" htmlFor={pClass.className} id={`${pClass.className}Label`} onClick={useSelectClass}>
+      <label className="classesLabels" htmlFor={pClass.className} id={`${pClass.className}Label`} onClick={selectClass}>
         <img src={pClass.classIcon} alt={pClass.className} id={pClass.className} style={!isSelectableIcon ? { filter: 'grayscale(100%)' } : {}}></img>
       </label>
       <p>{pClass.className}</p>

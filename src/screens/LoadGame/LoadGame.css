@@ -27,12 +27,13 @@
 }
 
 .loadGameMenu {
+  position: relative;
   background-color: rgba(0,0,0,0.6);
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: overlay;
-  min-width: 54.5vw;
+  min-width: 55vw;
   min-height: 83.5vh;
   width: 54.5vw;
   height: 83.5vh;
@@ -41,12 +42,8 @@
 }
 
 .loadGameMenu::-webkit-scrollbar {
-  display: none;
-}
-
-.loadGameMenu:hover::-webkit-scrollbar {
   display: initial;
- }
+}
 
 .loadGameMenu::-webkit-scrollbar-thumb {
  background-color: #976820;
@@ -95,6 +92,7 @@
   max-width: 54vw;
   border-radius: 1vw;
   background: rgba(0,0,0,0.7);
+  position: relative;
 }
 
 .loadingGameScreen label {
@@ -104,8 +102,8 @@
 }
 
 .loadingGameScreen input[type="radio"]:checked + label {
-  border: 3px solid rgb(0, 255, 64);
-  box-shadow: inset 0 0 5vw rgb(0, 255, 64);
+  border: 3px solid rgb(18, 155, 64);
+  box-shadow: inset 0 0 5vw rgb(18, 155, 64);
   transition: 0.2s ease-in-out;
 }
 
@@ -137,27 +135,29 @@
 }
 
 .characterPictureSpanded {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   opacity: 0;
   visibility: hidden;
   position: absolute;
   top: 5%;
   left: 30%;
-  height: 40vh;
   border: 1px solid #d9952e;
   background-size: cover;
-  background-color: rgba(0,0,0, 0.4);
+  background-color: rgba(0,0,0, 0.6);
   background-blend-mode: overlay;
   z-index: 10;
   transform: scale(0.1);
   transition: 0.3s ease-in-out;
+  min-width: 27vh;
+  min-height: 27vh;
 } 
 
 .characterPictureSpanded img {
-  max-height: 40vh;
-  height: 40vh;
-  width: 40vh;
-  
-}
+  width: auto;
+  height: 27vh; 
+} 
 
 .characterPictureSpanded:hover {
   opacity: 1;
@@ -171,8 +171,6 @@
   visibility: visible;
   margin-top: 30%;
   margin-left: 30%;
-  height: 40vh;
-  max-height: 40vh;
   transform: scale(1);
   transition: 0.3s ease-in-out;
 }
@@ -238,6 +236,7 @@
   align-content: center;
   padding-left: 0.5vw;
   background: rgba(0,0,0,0.9);
+  position: relative;
 }
 
 .characterDetails .userDetails p {
@@ -263,15 +262,15 @@
 }
 
 .buttonContainer {
-  position: absolute;
+  position: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
-  bottom: 5%;
+  bottom: 5vh;
   height: 6vh;
-  width: 54.5vw;
+  width: 55vw;
   background-color: #d9952e;
-  border-radius: 0 0 1vw 1vw;
+  border: 1px solid #d9952e;  border-radius: 0 0 1vw 1vw;
   z-index: 20;
 }
 
@@ -282,4 +281,11 @@
 
 .emptyCharacterContainer {
   min-height: 32vh;
+}
+
+.deleteButton {
+/* position: fixed;
+  right: 1;
+  z-index: 1; */
+  border: 1px solid #fff;
 }
