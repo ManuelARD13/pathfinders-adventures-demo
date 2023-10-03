@@ -27,7 +27,7 @@ function Acknoledgements () {
           	Have a good day! or, perhaps, a good night!
       		</p> 
       	</div>
-      	<a href="http://localhost:3000/"><input type={"button"} value="End Game" /></a>
+      	<input type={"button"} value="End Game" onClick={() => location.reload()} />
     	</div>
     </section>
   )
