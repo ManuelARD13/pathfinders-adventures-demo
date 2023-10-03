@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 2vw 29vw 38vw 29vw 2vw;
   grid-template-rows: 9vh 89vh 2vh;
+  place-items: center;
   background-size: cover;
   background-color: rgba(0,0,0,0.2);
   background-blend-mode: overlay;
@@ -28,14 +29,14 @@
   align-items: center;
   justify-content: center;
   margin: 0 0 2vh 0;
-  max-width: 40vw;
-  max-height: 85vh;
+  max-height: 80vh;
 }
 
 .displayImgContainer img {
-  max-width: 40vw;
-  max-height: 85vh;
-}
+  height: 80vh;
+  position: relative;
+  z-index: -1;
+} 
 
 .displayRazesSelectorsContainer, .displayClassesSelectorsContainer {
   grid-column: 2 /span 1;

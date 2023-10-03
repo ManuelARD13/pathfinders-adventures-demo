@@ -20,7 +20,7 @@ function Start() {
       setSavedCharacters(savedCharacters);
     }
 
-    setScreen('Intro');
+    setScreen('MainMenu');
   };
 
   return (

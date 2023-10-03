@@ -8,7 +8,7 @@ import ClassIcon from 'Common/ClassIcon/ClassIcon';
 import Modal from 'Common/Modal/Modal';
 
 function ClassesSelector() {
-  const { playableClasses, setSelectionStage, gender, raze, cClass, characterStats, dispatch, isSelectable, setSelectable, finishCharacterProcess } = useContext(GameDataContext);
+  const { playableClasses, setSelectionStage, name, gender, raze, cClass, characterStats, dispatch, isSelectable, setSelectable, finishCharacterProcess } = useContext(GameDataContext);
 
   const [classRequirements, setClassRequirements] = useState(false);
   const [isModalOpen, setModalOpen] = useState(false);
@@ -101,7 +101,7 @@ function ClassesSelector() {
           ))}
         </form>
       </div>
-      <input type="button" className="continueButton" value="Comfirm Selections" id="comfirmClass" onClick={() => setModalOpen(true)} />
+      <input type="button" className="continueButton" value="Comfirm Selections" id="comfirmClass" onClick={() => {isSelectable && setModalOpen(true)}} />
       <div className="displayClassesDescriptionContainer">
         {Object.keys(cClass).length !== 0 ? (
           <>
@@ -133,14 +133,33 @@ function ClassesSelector() {
       </div>
       {isModalOpen && 
         <Modal>
-          <div>
-            <div>
-              <p>{cClass.className}</p>
-              <img src={cClass.classIcon}></img>
+          <div className="confirmCharacterModal">
+            <h1>Character Details</h1>
+            <p className='divider'></p>
+            <div className='confirmCharacterModalBody'>
+              <div>
+                <p>{name}</p>
+                <p>
+                  {
+                    raze.razeName.toLocaleUpperCase().charAt(0) + raze.razeName.slice(1)
+                  }
+                  {`  `}  
+                  {
+                    gender.toLocaleUpperCase().charAt(0) + gender.slice(1)
+                  }
+                </p>
+                <p>{cClass.className}</p>
+              </div>
+              <div>
+                <img src={cClass.classIcon} />
+              </div>
             </div>
-            <h3>Are you sure?</h3>
-            <button onClick={() => setModalOpen(false)}>Cancel</button>
-            <button onClick={finishCharacterProcess}>Continue</button>
+            <h2>Save Character?</h2>
+
+            <div className='confirmCharacterModalButtons'>   
+              <input type="button" value="Cancel" onClick={() => setModalOpen(false)} />
+              <input type="button" value="Continue" onClick={finishCharacterProcess} />
+            </div>
           </div>
         </Modal>
       }
