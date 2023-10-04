@@ -192,14 +192,12 @@ function StatsGenerator(){
                     </tbody>
                 </table>
                 <div className="screenButtonsContainer">
-                    <input type="button" value="Return" className="screenButtons"
-                        onClick={() => setScreen("MainMenu")} 
-                    />
                     <input type="button" value="Roll Dice!" className="screenButtons" id="buttonDice"
                         onClick={diceRoll} disabled={diceRolled ? true : false} 
                     />
                     <input type="button" value="Continue"
-                        className={diceRolled ? "screenButtons pulsate-fwd" : "screenButtons"}  
+                        className={"screenButtons"} 
+                        id={diceRolled ? "activeButton" : "inactiveButton"}  
                         onClick={() => createStats(diceRolls)} 
                     />
                 </div>

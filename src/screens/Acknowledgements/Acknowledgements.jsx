@@ -20,7 +20,7 @@ function Acknoledgements () {
     		</div>
       	<div className="linkMessage"> 
         	<p> 
-          	You can see all the work behind this DEMO App on my <a href="https://github.com/ManuelARD13/pathfinders-adventures-cosmos-quest">Github Repository</a>
+          	You can see all the work behind this DEMO App on my <a href="https://github.com/ManuelARD13/pathfinders-adventures-demo">Github Repository</a>
         	</p>
       		<p>
          	  Thank you so much for testing this App. Hope you like it! <br/>

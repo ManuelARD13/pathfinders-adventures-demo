@@ -250,11 +250,15 @@
 .characterDetails .infoBar {
   grid-column: 1/ -1;
   grid-row: 2/span 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   border: 3px solid #d9952e;
   border-radius: 1vh;
   display: flex;
   align-items: center;
-  padding-left: 1.5vw;
+  padding: 0 1.5vw;
   font-size: 1.2rem;
   font-style: italic;
   letter-spacing: 0.05rem;
@@ -284,8 +288,8 @@
 }
 
 .deleteButton {
-/* position: fixed;
-  right: 1;
-  z-index: 1; */
-  border: 1px solid #fff;
+  display: inline-block;
+  width: 3.5vh;
+  color: #8b0a0a;
+  cursor: pointer;
 }

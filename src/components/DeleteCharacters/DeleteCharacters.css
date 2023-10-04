@@ -1,0 +1,22 @@
+.deleteCharactersModal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 43vh;
+  width: 48vw;
+  border: 1px solid #ccae27;
+  border-radius: 1vh;
+  background: rgba(0, 0, 0, 0.9);
+  font-family: 'Eagle Lake', cursive;
+}
+
+.deleteModalButtons {
+  display: flex;
+  gap: 1vw;
+  margin: 2vh;
+}
+
+.deleteModalButtons input {
+  width: 15vw;
+}

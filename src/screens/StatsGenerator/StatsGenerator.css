@@ -87,6 +87,14 @@ tr th {
   margin-top: 2vh;
 }
 
+.screenButtonsContainer > input {
+  width: 10.5vw;
+}
+
+#inactiveButton {
+  background: rgba(136, 135, 135, 0.719);
+}
+
 .diceRollTableContainer input:hover {
   transform: translate(0, -5px) scale(1.1)
 }
