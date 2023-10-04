@@ -2,7 +2,6 @@ Videogame interface demo app with React.js
 
 TODOs
 
-1._ Adjust soundPlayer Volume
 1._ Refactor statsGenerator logic using useReducer
 2._ Render Soundplayer on characterProfile screen after load a character
 2._ Complete final CSS desktop styles

@@ -6,15 +6,13 @@ function MainImageDisplay() {
   const { img, isSelectable, character } = useContext(GameDataContext)
 
   const setImage = () => {
-    if(!img){
-      if(!character){
-        return "https://i.imgur.com/aryfPBv.png"
+    console.log(character)
+      if(Object.keys(character).length === 0) {
+        console.log("wutt")
+        return img
       } else {
         return character.img
       }
-    } else {
-      return img
-    }
   }
   
   return(

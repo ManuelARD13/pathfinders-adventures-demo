@@ -9,26 +9,39 @@ import dwarfTrack from 'Audio/dwarf.mp3';
 import { GameDataContext } from 'Context/GameDataContext';
 
 function SoundPlayer() {
-  const { screen, selectionStage, raze } = useContext(GameDataContext);
+  const { screen, selectionStage, raze, character } = useContext(GameDataContext);
 
   const applyRazeBKMusic = () => {
-    if (raze.razeName === 'human') {
-      return humanTrack;
-    } else if (raze.razeName === 'elf') {
-      return elfTrack;
-    } else if (raze.razeName === 'orc') {
-      return orcTrack;
-    } else if (raze.razeName === 'dwarf') {
-      return dwarfTrack;
+    if(!!raze){
+      if (raze.razeName === 'human') {
+        return humanTrack;
+      } else if (raze.razeName === 'elf') {
+        return elfTrack;
+      } else if (raze.razeName === 'orc') {
+        return orcTrack;
+      } else if (raze.razeName === 'dwarf') {
+        return dwarfTrack;
+      }
+    } else {
+      if (character.raze.razeName === 'human') {
+        return humanTrack;
+      } else if (character.raze.razeName === 'elf') {
+        return elfTrack;
+      } else if (character.raze.razeName === 'orc') {
+        return orcTrack;
+      } else if (character.raze.razeName === 'dwarf') {
+        return dwarfTrack;
+      }
     }
+    
   };
 
   const currentTrack = useRef();
 
   useEffect(() => {
-    // Adjusting Soundtrack Volume once it's rendered and when selectionStage state changes 
-    currentTrack.current.volume = 0.35;
-  }, [currentTrack.current, selectionStage]);
+    // Adjusting Soundtrack Volume component when its available 
+    currentTrack.current.volume = 0.3;
+  }, [selectionStage, screen]);
 
   return (
     <>
@@ -43,7 +56,7 @@ function SoundPlayer() {
           : null
       }
       {
-        selectionStage === 'classes' && screen !== 'Acknowledgements' 
+        (selectionStage === 'classes' && screen !== 'Acknowledgements') || screen === 'CharacterProfile'
           ? <audio src={applyRazeBKMusic()} autoPlay loop ref={currentTrack} /> 
           : null
       }

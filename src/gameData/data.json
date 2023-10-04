@@ -237,7 +237,7 @@
             "dualClass": false
          },
          {
-            "className": "Babarian",
+            "className": "Barbarian",
             "classSkills": [
                "Untamable Rage",
                "Beast Reflexes",
@@ -248,27 +248,27 @@
             "classIcon": "https://i.imgur.com/vVWdxTB.png",
             "classImages": {
                "human": {
-                  "male": "https://i.imgur.com/igWDLOj.png",
-                  "female": "",
-                  "maleProfile": "https://i.imgur.com/EEt6eC3.png",
-                  "femaleProfile": ""
+                  "male": "https://i.imgur.com/nUDphU4.png",
+                  "female": "https://i.imgur.com/KBBQG8b.png",
+                  "maleProfile": "https://i.imgur.com/10PiNio.png",
+                  "femaleProfile": "https://i.imgur.com/58lWcIL.png"
                },
                "elf": {
-                  "male": "https://i.imgur.com/USIQtEb.png",
-                  "female": "https://i.imgur.com/9Sqe8ME.png",
-                  "maleProfile": "https://i.imgur.com/mtT3tL1.png",
-                  "femaleProfile": "https://i.imgur.com/vLsS5Un.png"
+                  "male": "",
+                  "female": "",
+                  "maleProfile": "",
+                  "femaleProfile": ""
                },
                "orc": {
-                  "male": "https://i.imgur.com/7tiOEWc.png",
-                  "female": "https://i.imgur.com/uzaD2L5.png",
-                  "maleProfile": "https://i.imgur.com/jhy9ZA8.png",
-                  "femaleProfile": "https://i.imgur.com/ppihHzc.png"
+                  "male": "https://i.imgur.com/T1eeF1q.png",
+                  "female": "https://i.imgur.com/9njgtd0.png",
+                  "maleProfile": "https://i.imgur.com/Z8OG4rp.png",
+                  "femaleProfile": "https://i.imgur.com/fTiyQbj.png"
                },
                "dwarf": {
-                  "male": "https://i.imgur.com/yQDyyGN.png",
+                  "male": "https://i.imgur.com/uAQfgpo.png",
                   "female": "",
-                  "maleProfile": "https://i.imgur.com/iidKH7B.png",
+                  "maleProfile": "i.https://imgur.com/1wtWFNw.png",
                   "femaleProfile": ""
                }
             },
