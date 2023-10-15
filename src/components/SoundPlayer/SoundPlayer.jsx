@@ -9,7 +9,7 @@ import dwarfTrack from 'Audio/dwarf.mp3';
 import { GameDataContext } from 'Context/GameDataContext';
 
 function SoundPlayer() {
-  const { screen, selectionStage, raze, character } = useContext(GameDataContext);
+  const { screenState, selectionStage, raze, character } = useContext(GameDataContext);
 
   const applyRazeBKMusic = () => {
     if(!!raze){
@@ -41,22 +41,22 @@ function SoundPlayer() {
   useEffect(() => {
     // Adjusting Soundtrack Volume component when its available 
     currentTrack.current.volume = 0.3;
-  }, [selectionStage, screen]);
+  }, [selectionStage, screenState]);
 
   return (
     <>
       {
-        screen !== 'StatsGenerator' && screen !== 'Main' && screen !== 'CharacterProfile' 
+        screenState !== 'StatsGenerator' && screenState !== 'Main' && screenState !== 'CharacterProfile' 
           ? <audio src={mainMenuTrack} autoPlay loop ref={currentTrack} /> 
           : null
       }
       {
-        screen === 'StatsGenerator' || (screen === 'Main' && selectionStage === 'razes') 
+        screenState === 'StatsGenerator' || (screenState === 'Main' && selectionStage === 'razes') 
           ? <audio src={tavernTrack} autoPlay loop ref={currentTrack} /> 
           : null
       }
       {
-        (selectionStage === 'classes' && screen !== 'Acknowledgements') || screen === 'CharacterProfile'
+        (selectionStage === 'classes' && screenState !== 'Acknowledgements') || screenState === 'CharacterProfile'
           ? <audio src={applyRazeBKMusic()} autoPlay loop ref={currentTrack} /> 
           : null
       }

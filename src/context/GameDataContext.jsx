@@ -21,7 +21,7 @@ function GameDataCtx({ children }) {
   }, [])
 
   // Display States
-  const [ screen, setScreen ] = useState("Start");
+  const [ screenState, setScreen ] = useState("Start");
   const [selectionStage, setSelectionStage] = useState("razes")
 
   // In-game character States
@@ -219,7 +219,7 @@ function GameDataCtx({ children }) {
   return (
     <GameDataContext.Provider
       value={{
-        screen,
+        screenState,
         setScreen,
         selectionStage,
         setSelectionStage,

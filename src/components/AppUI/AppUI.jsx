@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { GameDataContext } from 'Context/GameDataContext';
 
-// import { LoadedCharacterProfile } from '../LoadedCharacterProfile/LoadedCharacterProfile';
 import SoundPlayer from 'Components/SoundPlayer/SoundPlayer';
 import Start from 'Screens/Start/Start.jsx';
 import Intro from 'Screens/Intro/Intro';
@@ -14,28 +13,38 @@ import CharacterProfile from 'Screens/CharacterProfile/CharacterProfile';
 
 function AppUI() {
 
-  const { screen } = useContext(GameDataContext)
+  const { screenState } = useContext(GameDataContext)
+
+  if(screen.orientation.type === "portrait-primary"){
+    document.querySelector('body').requestFullscreen();
+    try{
+      screen.orientation.lock("landscape");
+    } catch(err){
+      console.log(err)
+    }
+  }
+
 
   /*Rendering*/
   return (
-    <>
-      {screen !== "Start" ?<SoundPlayer /> : null }
-      {screen !== "Start" ?  null : <Start />}
+    <div>
+      {screenState !== "Start" ?<SoundPlayer /> : null }
+      {screenState !== "Start" ?  null : <Start />}
      
-      {screen === "Intro" ? <Intro /> : null}
+      {screenState === "Intro" ? <Intro /> : null}
 
-      {screen === "MainMenu" ? <MainMenu /> : null}
+      {screenState === "MainMenu" ? <MainMenu /> : null}
 
-      {screen === "LoadGame" ? <LoadGame /> : null}
+      {screenState === "LoadGame" ? <LoadGame /> : null}
 
-      {screen === "StatsGenerator" ? <StatsGenerator /> : null}
+      {screenState === "StatsGenerator" ? <StatsGenerator /> : null}
 
-      {screen === "Main" ? <Main /> : null }
+      {screenState === "Main" ? <Main /> : null }
 
-      {screen === "CharacterProfile" ? <CharacterProfile /> : null }
+      {screenState === "CharacterProfile" ? <CharacterProfile /> : null }
 
-      {screen === "Acknowledgements" ? <Acknoledgements /> : null }
-    </>
+      {screenState === "Acknowledgements" ? <Acknoledgements /> : null }
+    </div>
   );
 }
 

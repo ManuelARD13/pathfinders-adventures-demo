@@ -8,11 +8,11 @@ function MainMenu() {
     const { setScreen } = useContext(GameDataContext)
 
     return(
-        <section className="mainMenu">
-            <div className="mainMenuDiv">
+        <section className="main-menu-screen">
+            <div className="main-menu-container">
                 <img src={pathfinderLogo} alt="pathfinderLogo" />
-                <h1 className="mainMenuSubtitle">Cosmo's Quests</h1>
-                <form className="mainMenuForm">
+                <h1 className="main-menu-subtitle">Cosmo's Quests</h1>
+                <form className="main-menu-form">
                     <input 
                         type="button" 
                         value="New Game" 

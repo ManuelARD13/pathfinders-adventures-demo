@@ -13,6 +13,7 @@
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"
   },
+  "homepage": "https://www.manuelrojas.tech",
   "name": "pathfinders-adventures-cq",
   "version": "1.0.0",
   "description": "Videogame interface demo app with React.js",
