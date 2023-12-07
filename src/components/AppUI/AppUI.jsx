@@ -27,7 +27,7 @@ function AppUI() {
 
   /*Rendering*/
   return (
-    <div>
+    <>
       {screenState !== "Start" ?<SoundPlayer /> : null }
       {screenState !== "Start" ?  null : <Start />}
      
@@ -44,7 +44,7 @@ function AppUI() {
       {screenState === "CharacterProfile" ? <CharacterProfile /> : null }
 
       {screenState === "Acknowledgements" ? <Acknoledgements /> : null }
-    </div>
+    </>
   );
 }
 

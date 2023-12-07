@@ -21,19 +21,21 @@ function Start() {
   };
 
   return (
-    <section className='start-screen'>
-      <div className='image-container'>
-        <img src={diceGoblin} alt='diceGoblin' />
+    <section className="start-screen container">
+      <div className="start-screen__image">
+        <img src={diceGoblin} alt="diceGoblin" />
       </div>
-      <div className='start-message-container'>
-        <p>
-          Click below to test this Demo App. <br />
-          Allow sound and fullscreen for a better experience. <br />
-          <br /> Thank you and good game!
+      <div className="start-screen__text">
+        <p>Click below to test this Demo App.</p>
+        <p>Allow sound and fullscreen for a better experience.</p>
+        <p className='start-screen__special-message'>
+          Thank You and Good Game!
         </p>
-        <p>This app is built on React.js applying Object-Oriented programming concepts, Arrays manipulation, and localStorage on Javascript. CSS3 for styling. Hosted and deployed on Vercel.</p>
-        <input type='button' value='START DEMO APP TRIAL' onClick={initializeLocalStorage} />
+        <button className="button" onClick={initializeLocalStorage}>
+          Start Trial
+        </button>
       </div>
+      <p className='start-screen__footer'>Powered by React.js</p>
     </section>
   );
 }

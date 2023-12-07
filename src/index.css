@@ -1,14 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Eagle+Lake&family=MedievalSharp&family=Press+Start+2P&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Metamorphous&family=Montserrat&family=Oswald:wght@700&display=swap');
+
 
 * {
   margin: 0;
-  padding: 0;
   user-select: none;
   box-sizing: border-box;
 }
 
 body {
+  background: #0a0402;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+
+
+/* body {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,9 +36,9 @@ body {
   background-color:black;
   background-size: cover;
   overflow: hidden;
-}
+} */
 
-input[type="button"] {
+.button {
   background: #870000;
   background-image: -webkit-linear-gradient(top, #870000, #190A05);
   background-image: -moz-linear-gradient(top, #870000, #190A05);
@@ -32,16 +51,16 @@ input[type="button"] {
   -webkit-box-shadow: 0px 7px 3px #141414;
   -moz-box-shadow: 0px 7px 3px #141414;
   box-shadow: 0px 7px 3px #141414;
-  font-family: 'MedievalSharp', cursive;
+  font-family: 'metamorphous', cursive;
   color: #ffffff;
-  font-size: 1rem;
+  font-size: 1.25rem;
   padding: 6px 12px;
   border: solid #CCAE27 1.5px;
   text-decoration: none;
   transition: 0.2s ease-out;
 }
 
-input[type="button"]:hover {
+.button:hover {
   background: #0a0402;
   text-decoration: none;
   transform: scale(1.1) translate(0, -5px);
