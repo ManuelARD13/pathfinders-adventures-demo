@@ -35,7 +35,7 @@
 .displayImgContainer img {
   height: 80vh;
   position: relative;
-  z-index: -1;
+  z-index: 0;
 } 
 
 .displayRazesSelectorsContainer, .displayClassesSelectorsContainer {
